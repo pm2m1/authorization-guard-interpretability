@@ -1,6 +1,6 @@
 # Snapshot file provenance against archive commit e6699e6. status: verbatim | modified | excerpt | new
 path	status	archive_path	archive_sha256	snapshot_sha256
-.github/workflows/ci.yml	new			7d3f2c76e023efde23d2d79c0338574a0dff6c560074e24a6f2d6ab58d0796ee
+.github/workflows/ci.yml	new			f78068cb1482d1a80bb14232046dc5fa33eb5a7bbfaee6f28ddf697bfc0cf368
 .gitignore	modified	.gitignore	70e226249debfe45cb000021709fe7b902c39507af73a311117406734efe75fa	525be2116e2c1ad3a982bbbcb3057cca38b78ce28edb3f8f26ec6ab9aaaa51c4
 .python-version	verbatim	.python-version	7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d	7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d
 CITATION.cff	new			6e06954213144a8571ead1e2c734431be1663301902f906f2d8959e47039a46a

@@ -39,7 +39,7 @@ jobs:
 
   mechinterp-tests:
     # macOS arm64: the locked torch wheel here is the small CPU/MPS build; on Linux the same lock pulls CUDA packages.
-    runs-on: macos-14
+    runs-on: macos-15
     timeout-minutes: 30
     defaults:
       run:
