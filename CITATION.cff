@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite it using the metadata below. This is an exploratory research artifact; it has not been peer-reviewed."
+type: software
+title: "Authorization Guard Interpretability: an exploratory study of authorization reasoning, internal representation readout, and evaluation reliability in language models"
+authors:
+  - given-names: Parth
+    family-names: Mishra
+repository-code: "https://github.com/pm2m1/authorization-guard-interpretability"
+url: "https://github.com/pm2m1/authorization-guard-interpretability"
+abstract: >-
+  Exploratory research pilot and software artifact. It evaluates Qwen3.5-9B (bf16) as an authorization guard on
+  864 synthetic items from 24 scenarios with a formal three-valued oracle, probes residual-stream activations
+  under scenario-disjoint validation against lexical, output-confidence and construction-aware baselines, and
+  measures how escalation outcomes depend on the answer interface and scoring procedure. Activation probes did
+  not show credible error-prediction value beyond item structure. Developed with AI assistance; see README.
+keywords:
+  - ai-safety
+  - mechanistic-interpretability
+  - authorization
+  - linear-probing
+  - llm-evaluation
+  - reproducible-research
+license:
+  - Apache-2.0
+  - CC-BY-4.0

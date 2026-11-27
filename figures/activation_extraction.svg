@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 750" width="900" height="750" role="img" aria-labelledby="t d">
+<title id="t">Activation extraction</title>
+<desc id="d">Prompt rendering, the 32-block hybrid decoder with sampled full-attention blocks 7, 15, 23, 31, last-token and user-mean representations of size 4096, offline scenario-disjoint linear probes, and separate four-label behavioural scoring.</desc>
+<style>
+text{font-family:system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:#0b0b0b}
+.bg{fill:#fcfcfb}.title{font-size:17px;font-weight:600}.sub{font-size:13px;fill:#52514e}
+.t{font-size:13px}.s{font-size:12px;fill:#52514e}.b{font-weight:600}.mut{fill:#898781}.ink2{fill:#52514e}
+.grid{stroke:#e1e0d9;stroke-width:1}.axis{stroke:#c3c2b7;stroke-width:1}.ref{stroke:#52514e;stroke-width:1.5}
+.s1{fill:#2a78d6}.s2{fill:#eb6834}.s3{fill:#1baf7a}.l1{stroke:#2a78d6}.l2{stroke:#eb6834}.l3{stroke:#1baf7a}
+.ring{stroke:#fcfcfb;stroke-width:2}.outline{fill:none;stroke:#52514e;stroke-width:1.5}
+.box{fill:#f3f2ee;stroke:#c3c2b7;stroke-width:1}.boxa{fill:#eaf1fb;stroke:#2a78d6;stroke-width:1.2}
+.boxb{fill:#fdeee7;stroke:#eb6834;stroke-width:1.2}.boxc{fill:#e6f5ef;stroke:#1baf7a;stroke-width:1.2}
+.cellf{fill:#2a78d6}.celll{fill:#e1e0d9}.arrow{stroke:#52514e;stroke-width:1.5;fill:none}.head{fill:#52514e}
+.hatch{stroke:#2a78d6;stroke-width:2}.hatchbg{fill:#fcfcfb}.sep{stroke:#c3c2b7;stroke-width:1}
+@media (prefers-color-scheme: dark){
+text{fill:#f0efec}.bg{fill:#1a1a19}.sub,.s,.ink2{fill:#c3c2b7}.grid{stroke:#2c2c2a}.axis{stroke:#383835}.ref{stroke:#c3c2b7}
+.s1{fill:#3987e5}.s2{fill:#d95926}.s3{fill:#199e70}.l1{stroke:#3987e5}.l2{stroke:#d95926}.l3{stroke:#199e70}
+.ring{stroke:#1a1a19}.outline{stroke:#c3c2b7}.box{fill:#242422;stroke:#4a4a46}.boxa{fill:#1b2a3d;stroke:#3987e5}
+.boxb{fill:#3a2219;stroke:#d95926}.boxc{fill:#16302a;stroke:#199e70}.cellf{fill:#3987e5}.celll{fill:#383835}
+.arrow{stroke:#c3c2b7}.head{fill:#c3c2b7}.hatch{stroke:#3987e5}.hatchbg{fill:#1a1a19}.sep{stroke:#383835}}
+</style>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="head" d="M0,0 L10,5 L0,10 z"/></marker><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect class="hatchbg" width="6" height="6"/><line class="hatch" x1="0" y1="0" x2="0" y2="6"/></pattern></defs>
+<rect class="bg" width="900" height="750" rx="8"/>
+<text x="20.0" y="32.0" class="title">Activation extraction and probing</text>
+<text x="20.0" y="52.0" class="sub">Qwen3.5-9B text decoder: 32 blocks, hidden size 4096; hybrid attention. Sampled blocks are read with forward hooks.</text>
+<rect x="20" y="72" width="330" height="84" rx="6" class="box"/>
+<text x="32.0" y="94.0" class="t b" style="font-size:13px">Input</text>
+<text x="32.0" y="112.0" class="s" style="font-size:12px">system prompt: decision rules and the four labels</text>
+<text x="32.0" y="130.0" class="s" style="font-size:12px">user message: policy and evidence lines</text>
+<rect x="390" y="72" width="300" height="84" rx="6" class="box"/>
+<text x="402.0" y="94.0" class="t b" style="font-size:13px">Official chat template + tokenizer</text>
+<text x="402.0" y="112.0" class="s" style="font-size:12px">enable_thinking = False</text>
+<text x="402.0" y="130.0" class="s" style="font-size:12px">prompt ends: assistant, empty &lt;think&gt; block</text>
+<path class="arrow" d="M350.0,114.0 L388.0,114.0" marker-end="url(#ah)"/>
+<rect x="20" y="188" width="860" height="132" rx="6" class="box"/>
+<text x="32.0" y="206.0" class="t b">Decoder blocks 0–31</text>
+<path class="arrow" d="M540.0,156.0 L540.0,186.0" marker-end="url(#ah)"/>
+<rect x="40" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="58" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="76" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="94" y="218" width="15" height="30" rx="2" class="cellf"/>
+<rect x="112" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="130" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="148" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="166" y="218" width="15" height="30" rx="2" class="cellf"/>
+<path class="head" d="M167.5,264 L179.5,264 L173.5,254 z"/>
+<text x="173.5" y="280.0" class="s b" text-anchor="middle">7</text>
+<rect x="184" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="202" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="220" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="238" y="218" width="15" height="30" rx="2" class="cellf"/>
+<rect x="256" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="274" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="292" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="310" y="218" width="15" height="30" rx="2" class="cellf"/>
+<path class="head" d="M311.5,264 L323.5,264 L317.5,254 z"/>
+<text x="317.5" y="280.0" class="s b" text-anchor="middle">15</text>
+<rect x="328" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="346" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="364" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="382" y="218" width="15" height="30" rx="2" class="cellf"/>
+<rect x="400" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="418" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="436" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="454" y="218" width="15" height="30" rx="2" class="cellf"/>
+<path class="head" d="M455.5,264 L467.5,264 L461.5,254 z"/>
+<text x="461.5" y="280.0" class="s b" text-anchor="middle">23</text>
+<rect x="472" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="490" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="508" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="526" y="218" width="15" height="30" rx="2" class="cellf"/>
+<rect x="544" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="562" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="580" y="218" width="15" height="30" rx="2" class="celll"/>
+<rect x="598" y="218" width="15" height="30" rx="2" class="cellf"/>
+<path class="head" d="M599.5,264 L611.5,264 L605.5,254 z"/>
+<text x="605.5" y="280.0" class="s b" text-anchor="middle">31*</text>
+<rect x="626" y="214" width="120" height="38" rx="6" class="box"/>
+<text x="638.0" y="236.0" class="t b" style="font-size:12px">Final RMSNorm</text>
+<rect x="760" y="214" width="90" height="38" rx="6" class="box"/>
+<text x="772.0" y="236.0" class="t b" style="font-size:12px">LM head</text>
+<path class="arrow" d="M614.0,233.0 L624.0,233.0" marker-end="url(#ah)"/>
+<path class="arrow" d="M746.0,233.0 L758.0,233.0" marker-end="url(#ah)"/>
+<rect x="40" y="298" width="14" height="10" class="cellf"/>
+<text x="60.0" y="307.0" class="s">full attention (8, every 4th block)</text>
+<rect x="270" y="298" width="14" height="10" class="celll"/>
+<text x="290.0" y="307.0" class="s">Gated DeltaNet linear attention (24)</text>
+<path class="head" d="M520,308 L532,308 L526,298 z"/>
+<text x="540.0" y="307.0" class="s">sampled block</text>
+<text x="650.0" y="307.0" class="s">* block 31: read before final RMSNorm</text>
+<rect x="20" y="360" width="640" height="66" rx="6" class="boxa"/>
+<text x="32.0" y="382.0" class="t b" style="font-size:13px">Forward hooks (read-only; logits bitwise unchanged)</text>
+<text x="32.0" y="400.0" class="s" style="font-size:12px">blocks 7, 15, 23: block output = hidden_states[b+1];  block 31: pre-norm residual stream</text>
+<path class="arrow" d="M340.0,320.0 L340.0,358.0" marker-end="url(#ah)"/>
+<rect x="20" y="464" width="310" height="66" rx="6" class="boxa"/>
+<text x="32.0" y="486.0" class="t b" style="font-size:13px">Last prompt token (primary)</text>
+<text x="32.0" y="504.0" class="s" style="font-size:12px">pre-decision position · 4096-d</text>
+<rect x="350" y="464" width="310" height="66" rx="6" class="boxa"/>
+<text x="362.0" y="486.0" class="t b" style="font-size:13px">Mean over user-message tokens</text>
+<text x="362.0" y="504.0" class="s" style="font-size:12px">secondary · 4096-d</text>
+<path class="arrow" d="M175.0,426.0 L175.0,462.0" marker-end="url(#ah)"/>
+<path class="arrow" d="M505.0,426.0 L505.0,462.0" marker-end="url(#ah)"/>
+<rect x="20" y="574" width="640" height="106" rx="6" class="boxc"/>
+<text x="32.0" y="596.0" class="t b" style="font-size:13px">Offline analysis on stored activations (CPU)</text>
+<text x="32.0" y="614.0" class="s" style="font-size:12px">float16 array: 864 items × 4 blocks × 2 positions × 4096</text>
+<text x="32.0" y="632.0" class="s" style="font-size:12px">standardised, L2 logistic regression; C chosen by inner grouped CV</text>
+<text x="32.0" y="650.0" class="s" style="font-size:12px">outer leave-one-scenario-out over 24 scenarios → Task A (status), Task B (errors)</text>
+<path class="arrow" d="M175.0,530.0 L175.0,572.0" marker-end="url(#ah)"/>
+<path class="arrow" d="M505.0,530.0 L505.0,572.0" marker-end="url(#ah)"/>
+<rect x="690" y="360" width="190" height="170" rx="6" class="boxb"/>
+<text x="702.0" y="382.0" class="t b" style="font-size:13px">Four-label scoring</text>
+<text x="702.0" y="401.0" class="s" style="font-size:12px">teacher-forced log-prob</text>
+<text x="702.0" y="420.0" class="s" style="font-size:12px">of “LABEL\n” for each of</text>
+<text x="702.0" y="439.0" class="s" style="font-size:12px">ALLOW, DENY,</text>
+<text x="702.0" y="458.0" class="s" style="font-size:12px">REQUEST_EVIDENCE,</text>
+<text x="702.0" y="477.0" class="s" style="font-size:12px">ESCALATE; decision =</text>
+<text x="702.0" y="496.0" class="s" style="font-size:12px">argmax, margin = top − 2nd</text>
+<line x1="805.0" y1="252.0" x2="805.0" y2="288.0" class="arrow"/>
+<path class="arrow" d="M805.0,320.0 L805.0,358.0" marker-end="url(#ah)"/>
+<path class="arrow" d="M785.0,530.0 L785.0,628.0 L662.0,628.0" marker-end="url(#ah)"/>
+<text x="690.0" y="620.0" class="s">Task B labels</text>
+<text x="20.0" y="720.0" class="s mut">Probes are fitted after the forward passes on saved arrays; they are not part of the model and do not influence its decisions.</text>
+</svg>

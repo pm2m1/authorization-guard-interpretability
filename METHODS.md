@@ -28,6 +28,9 @@ This is a short description of each method component, with pointers to the froze
 
 ## Activation extraction
 
+![Activation extraction: chat-templated prompt into the 32-block hybrid decoder; forward hooks on full-attention blocks 7, 15, 23 and 31 (block 31 before the final RMSNorm); last-token and user-mean 4096-d representations; offline scenario-disjoint linear probes; separate four-label scoring.](figures/activation_extraction.svg)
+
+
 - **Sites.** Decoder blocks 7, 15, 23 and 31 (all full-attention blocks), captured with forward hooks.
   - Blocks 7, 15 and 23 equal `hidden_states[b+1]`.
   - Block 31 is captured **before** the final RMSNorm.

@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 488" width="800" height="488" role="img" aria-labelledby="t d">
+<title id="t">Error-prediction AUROC by score</title>
+<desc id="d">Output margin: 0.689; TF-IDF (user prompt): 0.732; Text + margin: 0.838; Best of 8: block 31, last token: 0.919; Structured features: 0.955; Structured + margin: 0.969</desc>
+<style>
+text{font-family:system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:#0b0b0b}
+.bg{fill:#fcfcfb}.title{font-size:17px;font-weight:600}.sub{font-size:13px;fill:#52514e}
+.t{font-size:13px}.s{font-size:12px;fill:#52514e}.b{font-weight:600}.mut{fill:#898781}.ink2{fill:#52514e}
+.grid{stroke:#e1e0d9;stroke-width:1}.axis{stroke:#c3c2b7;stroke-width:1}.ref{stroke:#52514e;stroke-width:1.5}
+.s1{fill:#2a78d6}.s2{fill:#eb6834}.s3{fill:#1baf7a}.l1{stroke:#2a78d6}.l2{stroke:#eb6834}.l3{stroke:#1baf7a}
+.ring{stroke:#fcfcfb;stroke-width:2}.outline{fill:none;stroke:#52514e;stroke-width:1.5}
+.box{fill:#f3f2ee;stroke:#c3c2b7;stroke-width:1}.boxa{fill:#eaf1fb;stroke:#2a78d6;stroke-width:1.2}
+.boxb{fill:#fdeee7;stroke:#eb6834;stroke-width:1.2}.boxc{fill:#e6f5ef;stroke:#1baf7a;stroke-width:1.2}
+.cellf{fill:#2a78d6}.celll{fill:#e1e0d9}.arrow{stroke:#52514e;stroke-width:1.5;fill:none}.head{fill:#52514e}
+.hatch{stroke:#2a78d6;stroke-width:2}.hatchbg{fill:#fcfcfb}.sep{stroke:#c3c2b7;stroke-width:1}
+@media (prefers-color-scheme: dark){
+text{fill:#f0efec}.bg{fill:#1a1a19}.sub,.s,.ink2{fill:#c3c2b7}.grid{stroke:#2c2c2a}.axis{stroke:#383835}.ref{stroke:#c3c2b7}
+.s1{fill:#3987e5}.s2{fill:#d95926}.s3{fill:#199e70}.l1{stroke:#3987e5}.l2{stroke:#d95926}.l3{stroke:#199e70}
+.ring{stroke:#1a1a19}.outline{stroke:#c3c2b7}.box{fill:#242422;stroke:#4a4a46}.boxa{fill:#1b2a3d;stroke:#3987e5}
+.boxb{fill:#3a2219;stroke:#d95926}.boxc{fill:#16302a;stroke:#199e70}.cellf{fill:#3987e5}.celll{fill:#383835}
+.arrow{stroke:#c3c2b7}.head{fill:#c3c2b7}.hatch{stroke:#3987e5}.hatchbg{fill:#1a1a19}.sep{stroke:#383835}}
+</style>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="head" d="M0,0 L10,5 L0,10 z"/></marker><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect class="hatchbg" width="6" height="6"/><line class="hatch" x1="0" y1="0" x2="0" y2="6"/></pattern></defs>
+<rect class="bg" width="800" height="488" rx="8"/>
+<text x="20.0" y="30.0" class="title">Error prediction: activations versus cheaper and construction-aware signals</text>
+<text x="20.0" y="50.0" class="sub">AUROC for predicting the model&#x27;s own authorization errors; primary set n = 432 (203 errors); 95% scenario-cluster bootstrap intervals</text>
+<line x1="590.0" y1="80.0" x2="590.0" y2="350.0" class="grid"/>
+<line x1="522.0" y1="80.0" x2="522.0" y2="350.0" class="grid"/>
+<line x1="454.0" y1="80.0" x2="454.0" y2="350.0" class="grid"/>
+<line x1="386.0" y1="80.0" x2="386.0" y2="350.0" class="grid"/>
+<line x1="318.0" y1="80.0" x2="318.0" y2="350.0" class="grid"/>
+<line x1="250.0" y1="80.0" x2="250.0" y2="350.0" class="grid"/>
+<text x="20.0" y="102.0" class="t b">Deployable</text>
+<text x="236.0" y="124.0" class="t" text-anchor="end">Output margin</text>
+<line x1="357.4" y1="120.0" x2="399.6" y2="120.0" class="l1" stroke-width="2.0"/>
+<line x1="357.4" y1="115.0" x2="357.4" y2="125.0" class="l1" stroke-width="2.0"/>
+<line x1="399.6" y1="115.0" x2="399.6" y2="125.0" class="l1" stroke-width="2.0"/>
+<circle cx="378.5" cy="120.0" r="6" class="s1 ring"/>
+<text x="606.0" y="124.0" class="t">0.689 [0.658, 0.720]</text>
+<text x="236.0" y="154.0" class="t" text-anchor="end">TF-IDF (user prompt)</text>
+<line x1="388.7" y1="150.0" x2="426.1" y2="150.0" class="l1" stroke-width="2.0"/>
+<line x1="388.7" y1="145.0" x2="388.7" y2="155.0" class="l1" stroke-width="2.0"/>
+<line x1="426.1" y1="145.0" x2="426.1" y2="155.0" class="l1" stroke-width="2.0"/>
+<circle cx="407.8" cy="150.0" r="6" class="s1 ring"/>
+<text x="606.0" y="154.0" class="t">0.732 [0.704, 0.759]</text>
+<text x="236.0" y="184.0" class="t" text-anchor="end">Text + margin</text>
+<line x1="469.0" y1="180.0" x2="490.7" y2="180.0" class="l1" stroke-width="2.0"/>
+<line x1="469.0" y1="175.0" x2="469.0" y2="185.0" class="l1" stroke-width="2.0"/>
+<line x1="490.7" y1="175.0" x2="490.7" y2="185.0" class="l1" stroke-width="2.0"/>
+<circle cx="479.8" cy="180.0" r="6" class="s1 ring"/>
+<text x="606.0" y="184.0" class="t">0.838 [0.822, 0.854]</text>
+<text x="20.0" y="220.0" class="t b">Activation probe</text>
+<text x="236.0" y="242.0" class="t" text-anchor="end">Best of 8: block 31, last token</text>
+<line x1="525.4" y1="238.0" x2="545.8" y2="238.0" class="l2" stroke-width="2.0"/>
+<line x1="525.4" y1="233.0" x2="525.4" y2="243.0" class="l2" stroke-width="2.0"/>
+<line x1="545.8" y1="233.0" x2="545.8" y2="243.0" class="l2" stroke-width="2.0"/>
+<circle cx="534.9" cy="238.0" r="6" class="s2 ring"/>
+<text x="606.0" y="242.0" class="t">0.919 [0.905, 0.935]</text>
+<text x="20.0" y="278.0" class="t b">Construction-aware (diagnostic ceiling, not deployable)</text>
+<text x="236.0" y="300.0" class="t" text-anchor="end">Structured features</text>
+<line x1="547.8" y1="296.0" x2="571.6" y2="296.0" class="l3" stroke-width="2.0"/>
+<line x1="547.8" y1="291.0" x2="547.8" y2="301.0" class="l3" stroke-width="2.0"/>
+<line x1="571.6" y1="291.0" x2="571.6" y2="301.0" class="l3" stroke-width="2.0"/>
+<circle cx="559.4" cy="296.0" r="6" class="s3 ring"/>
+<text x="606.0" y="300.0" class="t">0.955 [0.938, 0.973]</text>
+<text x="236.0" y="330.0" class="t" text-anchor="end">Structured + margin</text>
+<line x1="560.8" y1="326.0" x2="577.1" y2="326.0" class="l3" stroke-width="2.0"/>
+<line x1="560.8" y1="321.0" x2="560.8" y2="331.0" class="l3" stroke-width="2.0"/>
+<line x1="577.1" y1="321.0" x2="577.1" y2="331.0" class="l3" stroke-width="2.0"/>
+<circle cx="568.9" cy="326.0" r="6" class="s3 ring"/>
+<text x="606.0" y="330.0" class="t">0.969 [0.957, 0.981]</text>
+<text x="250.0" y="368.0" class="s" text-anchor="middle">0.5</text>
+<text x="318.0" y="368.0" class="s" text-anchor="middle">0.6</text>
+<text x="386.0" y="368.0" class="s" text-anchor="middle">0.7</text>
+<text x="454.0" y="368.0" class="s" text-anchor="middle">0.8</text>
+<text x="522.0" y="368.0" class="s" text-anchor="middle">0.9</text>
+<text x="590.0" y="368.0" class="s" text-anchor="middle">1.0</text>
+<text x="254.0" y="90.0" class="s mut">chance</text>
+<text x="420.0" y="388.0" class="s" text-anchor="middle">AUROC (higher = better error ranking)</text>
+<text x="20.0" y="416.0" class="s">Pre-declared conclusion: activations beat text + margin but not the construction-aware features, and they show no</text>
+<text x="20.0" y="434.0" class="s">error-ranking signal within cells where structure is fixed, so no credible value beyond item structure. All 8 activation probes: 0.825–0.919.</text>
+<text x="20.0" y="452.0" class="s">Structured features encode the dataset construction (including the condition that defines CONFLICT); they are not available in deployment.</text>
+<text x="20.0" y="470.0" class="s mut">Source: experiments/mechinterp/results/probe_results.json → primary_direct.taskB_error_prediction.metrics</text>
+</svg>

@@ -51,6 +51,27 @@ shasum -a 256 /tmp/regen/items.jsonl /tmp/regen/system_prompt.txt
 # expected: items 9d9ec3f7…2d12, system prompt 9634bb0b…8711 (manifests/exploratory_v1_dataset.json)
 ```
 
+## Figures
+
+```
+python3 scripts/generate_figures.py           # standard library only; rewrites figures/*.svg from the preserved results
+python3 scripts/generate_figures.py --png     # optional PNG export, if rsvg-convert is installed
+```
+
+- The script reads every plotted value from `experiments/mechinterp/results/`, `configs/`, `manifests/` and `data/synthetic/`. It cross-checks the class-level recall between the two saved analyses that report it.
+- Its output is deterministic: re-running it on unchanged inputs gives identical files.
+
+## Continuous integration
+
+`.github/workflows/ci.yml` runs on push and pull request, CPU only, with no model download:
+
+| Job | Runner | Runs |
+|---|---|---|
+| Integrity and root tests | Ubuntu | checksums, `verify_integrity.py`, figure regeneration with `git diff --exit-code`, root tests, ruff |
+| Pilot tests | macOS arm64 | the 9 pilot tests and ruff from the exact `uv.lock` |
+
+The pilot tests use macOS because the locked torch build on Linux pulls CUDA packages of several gigabytes. Actions are pinned to commit SHAs, and the workflow token is read-only.
+
 ## Level 3: full regeneration (requires model weights)
 
 **Work in a fresh clone.** The run scripts write over the preserved results:

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 466" width="780" height="466" role="img" aria-labelledby="t d">
+<title id="t">Layer-wise INCONSISTENT recall (post-hoc)</title>
+<desc id="d">INCONSISTENT recall for blocks 7, 15, 23, 31 and two positions: tfidf 0.264; act_7_last 0.819; act_7_user_mean 0.917; act_15_last 0.861; act_15_user_mean 0.958; act_23_last 0.861; act_23_user_mean 0.944; act_31_last 0.875; act_31_user_mean 0.778</desc>
+<style>
+text{font-family:system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:#0b0b0b}
+.bg{fill:#fcfcfb}.title{font-size:17px;font-weight:600}.sub{font-size:13px;fill:#52514e}
+.t{font-size:13px}.s{font-size:12px;fill:#52514e}.b{font-weight:600}.mut{fill:#898781}.ink2{fill:#52514e}
+.grid{stroke:#e1e0d9;stroke-width:1}.axis{stroke:#c3c2b7;stroke-width:1}.ref{stroke:#52514e;stroke-width:1.5}
+.s1{fill:#2a78d6}.s2{fill:#eb6834}.s3{fill:#1baf7a}.l1{stroke:#2a78d6}.l2{stroke:#eb6834}.l3{stroke:#1baf7a}
+.ring{stroke:#fcfcfb;stroke-width:2}.outline{fill:none;stroke:#52514e;stroke-width:1.5}
+.box{fill:#f3f2ee;stroke:#c3c2b7;stroke-width:1}.boxa{fill:#eaf1fb;stroke:#2a78d6;stroke-width:1.2}
+.boxb{fill:#fdeee7;stroke:#eb6834;stroke-width:1.2}.boxc{fill:#e6f5ef;stroke:#1baf7a;stroke-width:1.2}
+.cellf{fill:#2a78d6}.celll{fill:#e1e0d9}.arrow{stroke:#52514e;stroke-width:1.5;fill:none}.head{fill:#52514e}
+.hatch{stroke:#2a78d6;stroke-width:2}.hatchbg{fill:#fcfcfb}.sep{stroke:#c3c2b7;stroke-width:1}
+@media (prefers-color-scheme: dark){
+text{fill:#f0efec}.bg{fill:#1a1a19}.sub,.s,.ink2{fill:#c3c2b7}.grid{stroke:#2c2c2a}.axis{stroke:#383835}.ref{stroke:#c3c2b7}
+.s1{fill:#3987e5}.s2{fill:#d95926}.s3{fill:#199e70}.l1{stroke:#3987e5}.l2{stroke:#d95926}.l3{stroke:#199e70}
+.ring{stroke:#1a1a19}.outline{stroke:#c3c2b7}.box{fill:#242422;stroke:#4a4a46}.boxa{fill:#1b2a3d;stroke:#3987e5}
+.boxb{fill:#3a2219;stroke:#d95926}.boxc{fill:#16302a;stroke:#199e70}.cellf{fill:#3987e5}.celll{fill:#383835}
+.arrow{stroke:#c3c2b7}.head{fill:#c3c2b7}.hatch{stroke:#3987e5}.hatchbg{fill:#1a1a19}.sep{stroke:#383835}}
+</style>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="head" d="M0,0 L10,5 L0,10 z"/></marker><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect class="hatchbg" width="6" height="6"/><line class="hatch" x1="0" y1="0" x2="0" y2="6"/></pattern></defs>
+<rect class="bg" width="780" height="466" rx="8"/>
+<text x="20.0" y="30.0" class="title">Linear decodability of the CONFLICT construction (INCONSISTENT recall)</text>
+<text x="20.0" y="50.0" class="sub">POST-HOC, EXPLORATORY · 4-class probe, leave-one-scenario-out over 24 scenarios, primary set (n = 432)</text>
+<line x1="110.0" y1="336.0" x2="580.0" y2="336.0" class="grid"/>
+<text x="102.0" y="340.0" class="s" text-anchor="end">0.00</text>
+<line x1="110.0" y1="276.0" x2="580.0" y2="276.0" class="grid"/>
+<text x="102.0" y="280.0" class="s" text-anchor="end">0.25</text>
+<line x1="110.0" y1="216.0" x2="580.0" y2="216.0" class="grid"/>
+<text x="102.0" y="220.0" class="s" text-anchor="end">0.50</text>
+<line x1="110.0" y1="156.0" x2="580.0" y2="156.0" class="grid"/>
+<text x="102.0" y="160.0" class="s" text-anchor="end">0.75</text>
+<line x1="110.0" y1="96.0" x2="580.0" y2="96.0" class="grid"/>
+<text x="102.0" y="100.0" class="s" text-anchor="end">1.00</text>
+<text x="24.0" y="216.0" class="s" text-anchor="middle" transform="rotate(-90 24 216.0)">INCONSISTENT recall (n = 72 per probe)</text>
+<text x="150.0" y="358.0" class="s" text-anchor="middle">Block 7</text>
+<text x="286.7" y="358.0" class="s" text-anchor="middle">Block 15</text>
+<text x="423.3" y="358.0" class="s" text-anchor="middle">Block 23</text>
+<text x="560.0" y="358.0" class="s" text-anchor="middle">Block 31 (pre-norm)</text>
+<text x="355.0" y="380.0" class="s" text-anchor="middle">Sampled decoder block (0-indexed; all are full-attention blocks)</text>
+<line x1="110.0" y1="272.6" x2="580.0" y2="272.6" class="ref"/>
+<text x="588.0" y="276.6" class="s">TF-IDF baseline 0.264</text>
+<polyline points="150.0,139.4 286.7,129.4 423.3,129.4 560.0,126.0" fill="none" class="l1" stroke-width="2"/>
+<polyline points="150.0,115.9 286.7,106.1 423.3,109.4 560.0,149.3" fill="none" class="l2" stroke-width="2"/>
+<circle cx="150.0" cy="139.4" r="5.5" class="s1 ring"/>
+<text x="150.0" y="160.4" class="s" text-anchor="middle">0.819 (59/72)</text>
+<rect x="145.0" y="110.9" width="10" height="10" class="s2 ring"/>
+<text x="150.0" y="103.9" class="s" text-anchor="middle">0.917 (66/72)</text>
+<circle cx="286.7" cy="129.4" r="5.5" class="s1 ring"/>
+<text x="286.7" y="150.4" class="s" text-anchor="middle">0.861 (62/72)</text>
+<rect x="281.7" y="101.1" width="10" height="10" class="s2 ring"/>
+<text x="286.7" y="94.1" class="s" text-anchor="middle">0.958 (69/72)</text>
+<circle cx="423.3" cy="129.4" r="5.5" class="s1 ring"/>
+<text x="423.3" y="150.4" class="s" text-anchor="middle">0.861 (62/72)</text>
+<rect x="418.3" y="104.4" width="10" height="10" class="s2 ring"/>
+<text x="423.3" y="97.4" class="s" text-anchor="middle">0.944 (68/72)</text>
+<circle cx="560.0" cy="126.0" r="5.5" class="s1 ring"/>
+<text x="560.0" y="114.0" class="s" text-anchor="middle">0.875 (63/72)</text>
+<rect x="555.0" y="144.3" width="10" height="10" class="s2 ring"/>
+<text x="560.0" y="170.3" class="s" text-anchor="middle">0.778 (56/72)</text>
+<circle cx="593" cy="126.0" r="5" class="s1"/>
+<text x="604.0" y="130.0" class="t">Last prompt token</text>
+<rect x="588" y="144.3" width="10" height="10" class="s2"/>
+<text x="604.0" y="153.3" class="t">Mean over user tokens</text>
+<text x="20.0" y="412.0" class="s">All 8 probes: 0.778–0.958. Declared after the main results were seen; the construction-aware baseline decodes</text>
+<text x="20.0" y="430.0" class="s">INCONSISTENT perfectly only via the condition label (F1 ≤ 0.182 without it). Decodability is correlational, not causal use.</text>
+<text x="20.0" y="448.0" class="s mut">Source: experiments/mechinterp/results/label_diag/audit_taskA.json (cross-checked against posthoc_taskA_per_class.json)</text>
+</svg>

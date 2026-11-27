@@ -28,7 +28,7 @@ This repository is a **curated public snapshot derived from a private research a
 | `experiments/mechinterp/manifests/raw_results.sha256` | the `smoke_test.json` hash updated to the redacted file; the other 9 lines identical | consistency after redaction |
 | `reports/43…` | §1 replaced by a marked omission | archive housekeeping, plus an advisory table for an unrelated, excluded study |
 | `reports/47…`, `reports/49…` | §5 replaced by a marked omission | proposed follow-up research plan; private research-planning material |
-| `pyproject.toml`, `uv.lock` (root) | project renamed; scope reduced to the dataset generator; unused runtime dependencies and the stale Ollama/Docker marker removed; re-locked offline with **no version changes** among the remaining packages | the excluded code needed those dependencies |
+| `pyproject.toml`, `uv.lock` (root) | project renamed; scope reduced to the dataset generator; unused runtime dependencies and the stale Ollama/Docker marker removed; re-locked offline with **no version changes** among the remaining packages. A ruff line-length exemption was later added for `scripts/generate_figures.py`; the lock is unaffected. | the excluded code needed those dependencies; long caption strings in the figure script |
 | `tests/unit/test_oracle.py` | one line: `HealthCheck.filter_too_much` added to the suppressed Hypothesis health checks of the shared settings `S`; no assertion, strategy or example count changed | the property test `test_p1_p2_monotone_under_lcwa_when_added_fact_is_on_open_predicate` filters inputs by design (`assume`), and the health check made it fail intermittently (1 of 17 and 1 of 7 runs during preparation). After the change: 0 failures in 40 runs. The archive copy keeps the original line. |
 | `experiments/mechinterp/pyproject.toml` | the `description` string only; `uv.lock` unaffected | it referred to archive-internal investigations |
 | `README.md`, `experiments/mechinterp/README.md`, `.gitignore` | replaced by public versions | the archive versions describe the whole archive and its workflow |
@@ -39,11 +39,15 @@ The archive SHA-256 of each modified file is listed in `provenance_manifest.tsv`
 
 `research/decision_log_mechinterp.md` contains entries D40–D47 of the archive's append-only decision log, verbatim, under a short header. Entries D1–D39 concern excluded investigations.
 
-## New files (10)
+## New files (19)
 
-`LICENSE` (standard Apache-2.0 text), `LICENSE-docs-data.md`, `NOTICE`, `RESULTS.md`, `METHODS.md`, `REPRODUCIBILITY.md`, `LIMITATIONS.md`, `PROVENANCE.md`, `reports/README.md` and `provenance_manifest.tsv`.
+- **Documentation:** `LICENSE` (standard Apache-2.0 text), `LICENSE-docs-data.md`, `NOTICE`, `CITATION.cff`, `RESULTS.md`, `METHODS.md`, `REPRODUCIBILITY.md`, `LIMITATIONS.md`, `PROVENANCE.md`, `reports/README.md` and `provenance_manifest.tsv`.
+- **Presentation update (second commit):**
+  - `scripts/generate_figures.py`, a standard-library figure generator that reads the preserved results;
+  - six SVGs in `figures/`;
+  - `.github/workflows/ci.yml`, CPU-only checks.
 
-- These summarise and index archive material and contain no new experimental results. Every number in them was checked against the preserved result files.
+- These summarise, index and visualise archive material and contain no new experimental results. Every number in them was checked against the preserved result files. The figures are generated from those files, and the README example is a recorded item quoted verbatim.
 - The overview and the contribution statement in `README.md` were provided by the author. The historical AI-assistance disclosure from the archive is retained alongside them.
 
 ## Excluded (retained in the archive)
@@ -69,6 +73,7 @@ These were run on CPU only, without loading the model or running experiments:
 | Dataset regeneration (`generate --seed 20261125`) | byte-identical `items.jsonl` and `system_prompt.txt` |
 | Lock files (`uv lock --check`, both environments) | valid |
 | Root tests / ruff | 60 passed in each of 40 consecutive runs / clean |
+| Figure generation | deterministic: two runs give byte-identical SVGs; every plotted value matches the source files |
 | `experiments/mechinterp` tests / ruff | 9 passed / clean (fresh environment from `uv.lock`, offline) |
 
 The full archive's test suite has 106 tests (97 + 9), because it also covers the excluded code.

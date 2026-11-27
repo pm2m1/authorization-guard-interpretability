@@ -37,3 +37,4 @@ ignore = ["UP042"]
 
 [tool.ruff.lint.per-file-ignores]
 "src/authorization_closure/generate.py" = ["E501"]  # verbatim prompt text must not be re-wrapped
+"scripts/generate_figures.py" = ["E501"]  # long caption and SVG-path strings
