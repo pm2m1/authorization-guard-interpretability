@@ -1,0 +1,32 @@
+{
+  "name": "Output-label sensitivity diagnostic (reports/48); frozen before any new inference",
+  "model": {"id": "Qwen/Qwen3.5-9B", "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a", "dtype": "bfloat16", "device": "mps", "HF_HUB_OFFLINE": 1},
+  "environment": "experiments/mechinterp uv.lock (unchanged)",
+  "items": {"file": "manifests/label_diag/items.jsonl", "n": 144,
+            "selection": "src/mechinterp/label_diag.select_items: all 72 direct CONFLICT items (24 scenarios x 3 families) + per scenario (sorted base_id, index i) one TRUE=POS, one FALSE=NEG, one UNKNOWN=MISS direct control with families rotated TRUE->F[i%3], FALSE->F[(i+1)%3], UNKNOWN->F[(i+2)%3], F=(existential, universal, cumulative); 24 controls per status, 8 per (status, family). No dual-wording items. 2 of the 144 are earlier smoke-test items (reported; not excluded)."},
+  "conditions": {
+    "A": "original system prompt (manifests/label_diag/system_prompt_A.txt == data/synthetic/exploratory_v1/system_prompt.txt); saved results from results/behaviour_full.jsonl reused after the replay check",
+    "B": "ESCALATE -> NEEDS_REVIEW in both places it occurs; nothing else changed",
+    "C": "neutral identifiers, rules listed in identifier order with explicit mapping lines: A=ESCALATE, B=ALLOW, C=DENY, D=REQUEST_EVIDENCE",
+    "D": "neutral identifiers: A=DENY, B=REQUEST_EVIDENCE, C=ESCALATE, D=ALLOW",
+    "design_note": "In A/B the order is ALLOW, DENY, REQUEST_EVIDENCE, ESCALATE/NEEDS_REVIEW (positions 1-4). In C and D every decision has a different identifier and list position from A and from each other. Two mappings cannot balance all 4 positions; ESCALATE occupies positions 4 (A, B), 1 (C) and 3 (D)."
+  },
+  "scoring": {"primary": "total teacher-forced log-prob of '<candidate>\\n' (same as the pilot); decision = argmax over the 4 operational decisions",
+              "sensitivity_normalisations": ["first-token log-prob only (removes length and termination effects)", "mean log-prob per candidate token (total / n_tokens)"],
+              "probabilities": ["p_choice = softmax over the 4 total log-probs (renormalised among candidates)", "p_first = exp(first-token log-prob), the absolute next-token probability"],
+              "tokenisation": "manifests/label_diag/tokenisation.json (all first tokens distinct in every condition; token-ID concatenation equals text tokenisation)"},
+  "workload": {"primary_new": "3 conditions (B, C, D) x 144 items x 4 candidates = 1,728 scoring forward passes (432 item evaluations; the approved maximum)",
+               "dev_replay": "condition A on 8 pre-declared items (manifests/label_diag/subsets.json) x 4 = 32 passes; purpose: verify bitwise compatibility of reused saved A results with the new code path",
+               "dev_freegen": "greedy generation (<=80 new tokens) on 12 pre-declared items (6 conflict: 2/family; 2 per control status) x 4 conditions = 48 generations; purpose: forced-choice vs free-generation agreement for the new interfaces and A on conflict items"},
+  "metrics_per_condition": ["4x4 confusion (gold operational decision x chosen decision)", "conflict items: correct-escalation count and recall", "controls: unnecessary-escalation count and rate (overall and per status)",
+                            "wrong-ALLOW count (all items; conflict; controls)", "accuracy (all, conflict, controls)", "mean p_choice(escalate) and mean p_first(escalate) on conflict vs controls",
+                            "AUROC of p_choice(escalate) conflict vs controls (discrimination; separates a genuine conflict-specific shift from a global rise in escalation)",
+                            "paired transitions vs A (per item: A decision -> X decision); conflict items: gained and lost escalations", "all of the above under the two sensitivity normalisations (decision-level metrics)"],
+  "uncertainty": "cluster bootstrap over the 24 base scenarios (2,000 resamples, seed 0), percentile 95% intervals; items, labels and passes are never treated as independent scenarios",
+  "interpretation_rules": ["Report interface sensitivity if escalation recall changes; do not claim lexical preference is the only cause",
+                           "A rise in escalation counts only as a decision-accuracy improvement if control unnecessary-escalation does not rise comparably (judged by accuracy on controls and the discrimination AUROC)",
+                           "If conflict escalation stays low in all interfaces: discrepancy robust to these tested interfaces only",
+                           "No causal or controllability claims; no steering"],
+  "calibration": "content-free label calibration NOT examined (no extra inference); stated as a limitation",
+  "no_tuning": "wording, mappings, items and metrics fixed here; not changed after outcomes"
+}

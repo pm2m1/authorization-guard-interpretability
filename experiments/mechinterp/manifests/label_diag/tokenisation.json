@@ -1,0 +1,238 @@
+{
+ "A": {
+  "ALLOW": {
+   "string": "ALLOW\\n",
+   "ids": [
+    51535,
+    198
+   ],
+   "pieces": [
+    "ALLOW",
+    "\u010a"
+   ],
+   "concat_tokenisation_matches_text": true
+  },
+  "DENY": {
+   "string": "DENY\\n",
+   "ids": [
+    88357,
+    56,
+    198
+   ],
+   "pieces": [
+    "DEN",
+    "Y",
+    "\u010a"
+   ],
+   "concat_tokenisation_matches_text": true
+  },
+  "REQUEST_EVIDENCE": {
+   "string": "REQUEST_EVIDENCE\\n",
+   "ids": [
+    10477,
+    2021,
+    7248,
+    9848,
+    198
+   ],
+   "pieces": [
+    "REQUEST",
+    "_E",
+    "VID",
+    "ENCE",
+    "\u010a"
+   ],
+   "concat_tokenisation_matches_text": true
+  },
+  "ESCALATE": {
+   "string": "ESCALATE\\n",
+   "ids": [
+    1515,
+    47868,
+    2260,
+    198
+   ],
+   "pieces": [
+    "ES",
+    "CAL",
+    "ATE",
+    "\u010a"
+   ],
+   "concat_tokenisation_matches_text": true
+  },
+  "_first_tokens_distinct": true,
+  "_system_prompt_sha256": "9634bb0b6bd4bda7e8cd8373a111e184e54b989ecbda5c75000844d0cc958711"
+ },
+ "B": {
+  "ALLOW": {
+   "string": "ALLOW\\n",
+   "ids": [
+    51535,
+    198
+   ],
+   "pieces": [
+    "ALLOW",
+    "\u010a"
+   ],
+   "concat_tokenisation_matches_text": true
+  },
+  "DENY": {
+   "string": "DENY\\n",
+   "ids": [
+    88357,
+    56,
+    198
+   ],
+   "pieces": [
+    "DEN",
+    "Y",
+    "\u010a"
+   ],
+   "concat_tokenisation_matches_text": true
+  },
+  "REQUEST_EVIDENCE": {
+   "string": "REQUEST_EVIDENCE\\n",
+   "ids": [
+    10477,
+    2021,
+    7248,
+    9848,
+    198
+   ],
+   "pieces": [
+    "REQUEST",
+    "_E",
+    "VID",
+    "ENCE",
+    "\u010a"
+   ],
+   "concat_tokenisation_matches_text": true
+  },
+  "ESCALATE": {
+   "string": "NEEDS_REVIEW\\n",
+   "ids": [
+    3811,
+    1425,
+    50,
+    2123,
+    20389,
+    198
+   ],
+   "pieces": [
+    "NE",
+    "ED",
+    "S",
+    "_RE",
+    "VIEW",
+    "\u010a"
+   ],
+   "concat_tokenisation_matches_text": true
+  },
+  "_first_tokens_distinct": true,
+  "_system_prompt_sha256": "7e91950552cdb0aca6c14590e2fcbd4ccfd0e8962534dd8d2de2f6f2a28bb33d"
+ },
+ "C": {
+  "ALLOW": {
+   "string": "B\\n",
+   "ids": [
+    33,
+    198
+   ],
+   "pieces": [
+    "B",
+    "\u010a"
+   ],
+   "concat_tokenisation_matches_text": true
+  },
+  "DENY": {
+   "string": "C\\n",
+   "ids": [
+    34,
+    198
+   ],
+   "pieces": [
+    "C",
+    "\u010a"
+   ],
+   "concat_tokenisation_matches_text": true
+  },
+  "REQUEST_EVIDENCE": {
+   "string": "D\\n",
+   "ids": [
+    35,
+    198
+   ],
+   "pieces": [
+    "D",
+    "\u010a"
+   ],
+   "concat_tokenisation_matches_text": true
+  },
+  "ESCALATE": {
+   "string": "A\\n",
+   "ids": [
+    32,
+    198
+   ],
+   "pieces": [
+    "A",
+    "\u010a"
+   ],
+   "concat_tokenisation_matches_text": true
+  },
+  "_first_tokens_distinct": true,
+  "_system_prompt_sha256": "645e4d4754a41115ada32fb3a4212a12853afe8cdd877eb2d34124aa20f44409"
+ },
+ "D": {
+  "ALLOW": {
+   "string": "D\\n",
+   "ids": [
+    35,
+    198
+   ],
+   "pieces": [
+    "D",
+    "\u010a"
+   ],
+   "concat_tokenisation_matches_text": true
+  },
+  "DENY": {
+   "string": "A\\n",
+   "ids": [
+    32,
+    198
+   ],
+   "pieces": [
+    "A",
+    "\u010a"
+   ],
+   "concat_tokenisation_matches_text": true
+  },
+  "REQUEST_EVIDENCE": {
+   "string": "B\\n",
+   "ids": [
+    33,
+    198
+   ],
+   "pieces": [
+    "B",
+    "\u010a"
+   ],
+   "concat_tokenisation_matches_text": true
+  },
+  "ESCALATE": {
+   "string": "C\\n",
+   "ids": [
+    34,
+    198
+   ],
+   "pieces": [
+    "C",
+    "\u010a"
+   ],
+   "concat_tokenisation_matches_text": true
+  },
+  "_first_tokens_distinct": true,
+  "_system_prompt_sha256": "53f05f600e42226c50059af1e1c3aee0aaddb84ad6eb0d6aac949cc837e7fe02"
+ }
+}

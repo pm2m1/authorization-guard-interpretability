@@ -1,0 +1,13 @@
+structured {'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'support': 72}
+structured_no_condition {'precision': 0.113, 'recall': 0.083, 'f1': 0.096, 'support': 72}
+structured_meta_only {'precision': 0.171, 'recall': 0.194, 'f1': 0.182, 'support': 72}
+tfidf {'precision': 0.306, 'recall': 0.264, 'f1': 0.284, 'support': 72}
+act_7_last {'precision': 0.702, 'recall': 0.819, 'f1': 0.756, 'support': 72}
+act_7_user_mean {'precision': 0.917, 'recall': 0.917, 'f1': 0.917, 'support': 72}
+act_15_last {'precision': 0.729, 'recall': 0.861, 'f1': 0.79, 'support': 72}
+act_15_user_mean {'precision': 0.972, 'recall': 0.958, 'f1': 0.965, 'support': 72}
+act_23_last {'precision': 0.925, 'recall': 0.861, 'f1': 0.892, 'support': 72}
+act_23_user_mean {'precision': 0.895, 'recall': 0.944, 'f1': 0.919, 'support': 72}
+act_31_last {'precision': 0.913, 'recall': 0.875, 'f1': 0.894, 'support': 72}
+act_31_user_mean {'precision': 0.683, 'recall': 0.778, 'f1': 0.727, 'support': 72}
+exit 0

@@ -1,0 +1,51 @@
+{
+ "label": "POST-HOC descriptive (D46)",
+ "A": {
+  "n": 12,
+  "agree_by_norm": {
+   "total": 12,
+   "first": 12,
+   "mean": 9
+  },
+  "first_line_format": {
+   "bare_candidate_line": 12,
+   "candidate_equals_name": 0
+  }
+ },
+ "B": {
+  "n": 12,
+  "agree_by_norm": {
+   "total": 12,
+   "first": 10,
+   "mean": 12
+  },
+  "first_line_format": {
+   "bare_candidate_line": 12,
+   "candidate_equals_name": 0
+  }
+ },
+ "C": {
+  "n": 12,
+  "agree_by_norm": {
+   "total": 12,
+   "first": 12,
+   "mean": 12
+  },
+  "first_line_format": {
+   "bare_candidate_line": 10,
+   "candidate_equals_name": 2
+  }
+ },
+ "D": {
+  "n": 12,
+  "agree_by_norm": {
+   "total": 8,
+   "first": 12,
+   "mean": 8
+  },
+  "first_line_format": {
+   "bare_candidate_line": 4,
+   "candidate_equals_name": 8
+  }
+ }
+}

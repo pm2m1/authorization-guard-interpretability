@@ -1,0 +1,107 @@
+{
+ "label": "POST-HOC EXPLORATORY within-cell error ranking (D43); descriptive only",
+ "primary_direct": {
+  "existential|MISS_LCWA": {
+   "errors": 9,
+   "non_errors": 15,
+   "auroc": {
+    "margin(-margin)": 0.681,
+    "tfidf": 0.444,
+    "text+margin": 0.511,
+    "act_7_last": 0.526,
+    "act_7_user_mean": 0.452,
+    "act_15_last": 0.4,
+    "act_15_user_mean": 0.622,
+    "act_23_last": 0.681,
+    "act_23_user_mean": 0.57,
+    "act_31_last": 0.63,
+    "act_31_user_mean": 0.504,
+    "act_7_last+text+margin": 0.481,
+    "act_7_user_mean+text+margin": 0.511,
+    "act_15_last+text+margin": 0.385,
+    "act_15_user_mean+text+margin": 0.6,
+    "act_23_last+text+margin": 0.689,
+    "act_23_user_mean+text+margin": 0.563,
+    "act_31_last+text+margin": 0.644,
+    "act_31_user_mean+text+margin": 0.6
+   }
+  },
+  "universal|MISS_LCWA": {
+   "errors": 18,
+   "non_errors": 6,
+   "auroc": {
+    "margin(-margin)": 0.13,
+    "tfidf": 0.472,
+    "text+margin": 0.139,
+    "act_7_last": 0.491,
+    "act_7_user_mean": 0.296,
+    "act_15_last": 0.565,
+    "act_15_user_mean": 0.435,
+    "act_23_last": 0.333,
+    "act_23_user_mean": 0.519,
+    "act_31_last": 0.472,
+    "act_31_user_mean": 0.481,
+    "act_7_last+text+margin": 0.5,
+    "act_7_user_mean+text+margin": 0.231,
+    "act_15_last+text+margin": 0.565,
+    "act_15_user_mean+text+margin": 0.435,
+    "act_23_last+text+margin": 0.333,
+    "act_23_user_mean+text+margin": 0.463,
+    "act_31_last+text+margin": 0.472,
+    "act_31_user_mean+text+margin": 0.565
+   }
+  }
+ },
+ "stress_dual": {
+  "existential|MISS": {
+   "errors": 15,
+   "non_errors": 9,
+   "auroc": {
+    "margin(-margin)": 0.326,
+    "tfidf": 0.711,
+    "text+margin": 0.333,
+    "act_7_last": 0.548,
+    "act_7_user_mean": 0.474,
+    "act_15_last": 0.363,
+    "act_15_user_mean": 0.585,
+    "act_23_last": 0.207,
+    "act_23_user_mean": 0.593,
+    "act_31_last": 0.43,
+    "act_31_user_mean": 0.533,
+    "act_7_last+text+margin": 0.533,
+    "act_7_user_mean+text+margin": 0.489,
+    "act_15_last+text+margin": 0.341,
+    "act_15_user_mean+text+margin": 0.541,
+    "act_23_last+text+margin": 0.207,
+    "act_23_user_mean+text+margin": 0.57,
+    "act_31_last+text+margin": 0.43,
+    "act_31_user_mean+text+margin": 0.504
+   }
+  },
+  "universal|MISS_IRREL": {
+   "errors": 6,
+   "non_errors": 18,
+   "auroc": {
+    "margin(-margin)": 0.981,
+    "tfidf": 0.25,
+    "text+margin": 0.963,
+    "act_7_last": 0.667,
+    "act_7_user_mean": 0.472,
+    "act_15_last": 0.657,
+    "act_15_user_mean": 0.741,
+    "act_23_last": 0.954,
+    "act_23_user_mean": 0.556,
+    "act_31_last": 0.713,
+    "act_31_user_mean": 0.324,
+    "act_7_last+text+margin": 0.694,
+    "act_7_user_mean+text+margin": 0.556,
+    "act_15_last+text+margin": 0.657,
+    "act_15_user_mean+text+margin": 0.722,
+    "act_23_last+text+margin": 0.954,
+    "act_23_user_mean+text+margin": 0.611,
+    "act_31_last+text+margin": 0.713,
+    "act_31_user_mean+text+margin": 0.417
+   }
+  }
+ }
+}

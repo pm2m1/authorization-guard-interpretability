@@ -1,0 +1,28 @@
+[project]
+name = "mechinterp-pilot"
+version = "0.1.0"
+description = "Mechanistic-interpretability pilot: Qwen3.5-9B forced-choice labels, residual-stream capture and linear probes"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "torch==2.15.0",
+  "transformers==5.22.2",
+  "accelerate<1.16",
+  "safetensors",
+  "huggingface_hub",
+  "numpy",
+  "pandas",
+  "scipy",
+  "scikit-learn==1.9.1",
+]
+
+[dependency-groups]
+dev = ["pytest", "ruff"]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 130
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

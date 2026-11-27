@@ -1,0 +1,1614 @@
+{
+ "label": "Label-sensitivity diagnostic (exploratory measurement check; not causal)",
+ "n_items": 144,
+ "norm_total": {
+  "A": {
+   "confusion_gold_rows": {
+    "ALLOW": {
+     "ALLOW": 16,
+     "DENY": 1,
+     "REQUEST_EVIDENCE": 7,
+     "ESCALATE": 0
+    },
+    "DENY": {
+     "ALLOW": 0,
+     "DENY": 16,
+     "REQUEST_EVIDENCE": 8,
+     "ESCALATE": 0
+    },
+    "REQUEST_EVIDENCE": {
+     "ALLOW": 0,
+     "DENY": 0,
+     "REQUEST_EVIDENCE": 24,
+     "ESCALATE": 0
+    },
+    "ESCALATE": {
+     "ALLOW": 15,
+     "DENY": 32,
+     "REQUEST_EVIDENCE": 25,
+     "ESCALATE": 0
+    }
+   },
+   "conflict_escalations": 0,
+   "conflict_n": 72,
+   "escalation_recall": 0.0,
+   "escalation_recall_ci": [
+    0.0,
+    0.0
+   ],
+   "control_unnecessary_escalations": 0,
+   "control_n": 72,
+   "unnecessary_escalation_rate": 0.0,
+   "unnecessary_escalation_ci": [
+    0.0,
+    0.0
+   ],
+   "unnecessary_escalation_by_status": {
+    "TRUE": 0,
+    "FALSE": 0,
+    "UNKNOWN": 0
+   },
+   "wrong_allow": {
+    "all": 15,
+    "conflict": 15,
+    "controls": 0
+   },
+   "accuracy": {
+    "all": 0.389,
+    "all_ci": [
+     0.361,
+     0.424
+    ],
+    "conflict": 0.0,
+    "controls": 0.778,
+    "controls_ci": [
+     0.722,
+     0.847
+    ]
+   },
+   "decision_distribution": {
+    "ALLOW": 31,
+    "DENY": 49,
+    "REQUEST_EVIDENCE": 64,
+    "ESCALATE": 0
+   },
+   "p_choice_escalate_mean": {
+    "conflict": 0.0062,
+    "controls": 0.0008,
+    "conflict_max": 0.0394
+   },
+   "p_first_escalate_mean": {
+    "conflict": 0.006,
+    "controls": 0.0009
+   },
+   "escalate_discrimination_auroc": 0.795,
+   "escalate_discrimination_auroc_ci": [
+    0.732,
+    0.862
+   ]
+  },
+  "B": {
+   "confusion_gold_rows": {
+    "ALLOW": {
+     "ALLOW": 16,
+     "DENY": 2,
+     "REQUEST_EVIDENCE": 6,
+     "ESCALATE": 0
+    },
+    "DENY": {
+     "ALLOW": 0,
+     "DENY": 18,
+     "REQUEST_EVIDENCE": 6,
+     "ESCALATE": 0
+    },
+    "REQUEST_EVIDENCE": {
+     "ALLOW": 0,
+     "DENY": 9,
+     "REQUEST_EVIDENCE": 15,
+     "ESCALATE": 0
+    },
+    "ESCALATE": {
+     "ALLOW": 11,
+     "DENY": 44,
+     "REQUEST_EVIDENCE": 17,
+     "ESCALATE": 0
+    }
+   },
+   "conflict_escalations": 0,
+   "conflict_n": 72,
+   "escalation_recall": 0.0,
+   "escalation_recall_ci": [
+    0.0,
+    0.0
+   ],
+   "control_unnecessary_escalations": 0,
+   "control_n": 72,
+   "unnecessary_escalation_rate": 0.0,
+   "unnecessary_escalation_ci": [
+    0.0,
+    0.0
+   ],
+   "unnecessary_escalation_by_status": {
+    "TRUE": 0,
+    "FALSE": 0,
+    "UNKNOWN": 0
+   },
+   "wrong_allow": {
+    "all": 11,
+    "conflict": 11,
+    "controls": 0
+   },
+   "accuracy": {
+    "all": 0.34,
+    "all_ci": [
+     0.285,
+     0.396
+    ],
+    "conflict": 0.0,
+    "controls": 0.681,
+    "controls_ci": [
+     0.569,
+     0.792
+    ]
+   },
+   "decision_distribution": {
+    "ALLOW": 27,
+    "DENY": 73,
+    "REQUEST_EVIDENCE": 44,
+    "ESCALATE": 0
+   },
+   "p_choice_escalate_mean": {
+    "conflict": 0.0607,
+    "controls": 0.0188,
+    "conflict_max": 0.318
+   },
+   "p_first_escalate_mean": {
+    "conflict": 0.0603,
+    "controls": 0.0202
+   },
+   "escalate_discrimination_auroc": 0.78,
+   "escalate_discrimination_auroc_ci": [
+    0.721,
+    0.842
+   ],
+   "transitions_from_A": {
+    "ALLOW->ALLOW": 27,
+    "ALLOW->DENY": 4,
+    "DENY->DENY": 49,
+    "REQUEST_EVIDENCE->DENY": 20,
+    "REQUEST_EVIDENCE->REQUEST_EVIDENCE": 44
+   },
+   "conflict_gained_escalations": 0,
+   "conflict_lost_escalations": 0,
+   "changed_decisions": 24,
+   "escalation_recall_change_vs_A": 0.0,
+   "escalation_recall_change_ci": [
+    0.0,
+    0.0
+   ],
+   "accuracy_change_vs_A": -0.049,
+   "accuracy_change_ci": [
+    -0.083,
+    -0.021
+   ]
+  },
+  "C": {
+   "confusion_gold_rows": {
+    "ALLOW": {
+     "ALLOW": 19,
+     "DENY": 4,
+     "REQUEST_EVIDENCE": 1,
+     "ESCALATE": 0
+    },
+    "DENY": {
+     "ALLOW": 2,
+     "DENY": 20,
+     "REQUEST_EVIDENCE": 2,
+     "ESCALATE": 0
+    },
+    "REQUEST_EVIDENCE": {
+     "ALLOW": 0,
+     "DENY": 12,
+     "REQUEST_EVIDENCE": 12,
+     "ESCALATE": 0
+    },
+    "ESCALATE": {
+     "ALLOW": 12,
+     "DENY": 41,
+     "REQUEST_EVIDENCE": 2,
+     "ESCALATE": 17
+    }
+   },
+   "conflict_escalations": 17,
+   "conflict_n": 72,
+   "escalation_recall": 0.236,
+   "escalation_recall_ci": [
+    0.153,
+    0.319
+   ],
+   "control_unnecessary_escalations": 0,
+   "control_n": 72,
+   "unnecessary_escalation_rate": 0.0,
+   "unnecessary_escalation_ci": [
+    0.0,
+    0.0
+   ],
+   "unnecessary_escalation_by_status": {
+    "TRUE": 0,
+    "FALSE": 0,
+    "UNKNOWN": 0
+   },
+   "wrong_allow": {
+    "all": 14,
+    "conflict": 12,
+    "controls": 2
+   },
+   "accuracy": {
+    "all": 0.472,
+    "all_ci": [
+     0.417,
+     0.528
+    ],
+    "conflict": 0.236,
+    "controls": 0.708,
+    "controls_ci": [
+     0.611,
+     0.806
+    ]
+   },
+   "decision_distribution": {
+    "ALLOW": 33,
+    "DENY": 77,
+    "REQUEST_EVIDENCE": 17,
+    "ESCALATE": 17
+   },
+   "p_choice_escalate_mean": {
+    "conflict": 0.2567,
+    "controls": 0.0265,
+    "conflict_max": 0.8708
+   },
+   "p_first_escalate_mean": {
+    "conflict": 0.286,
+    "controls": 0.0322
+   },
+   "escalate_discrimination_auroc": 0.932,
+   "escalate_discrimination_auroc_ci": [
+    0.894,
+    0.968
+   ],
+   "transitions_from_A": {
+    "ALLOW->ALLOW": 28,
+    "ALLOW->DENY": 2,
+    "ALLOW->ESCALATE": 1,
+    "DENY->ALLOW": 2,
+    "DENY->DENY": 31,
+    "DENY->ESCALATE": 16,
+    "REQUEST_EVIDENCE->ALLOW": 3,
+    "REQUEST_EVIDENCE->DENY": 44,
+    "REQUEST_EVIDENCE->REQUEST_EVIDENCE": 17
+   },
+   "conflict_gained_escalations": 17,
+   "conflict_lost_escalations": 0,
+   "changed_decisions": 68,
+   "escalation_recall_change_vs_A": 0.236,
+   "escalation_recall_change_ci": [
+    0.153,
+    0.319
+   ],
+   "accuracy_change_vs_A": 0.083,
+   "accuracy_change_ci": [
+    0.028,
+    0.146
+   ]
+  },
+  "D": {
+   "confusion_gold_rows": {
+    "ALLOW": {
+     "ALLOW": 19,
+     "DENY": 0,
+     "REQUEST_EVIDENCE": 3,
+     "ESCALATE": 2
+    },
+    "DENY": {
+     "ALLOW": 4,
+     "DENY": 11,
+     "REQUEST_EVIDENCE": 5,
+     "ESCALATE": 4
+    },
+    "REQUEST_EVIDENCE": {
+     "ALLOW": 0,
+     "DENY": 1,
+     "REQUEST_EVIDENCE": 21,
+     "ESCALATE": 2
+    },
+    "ESCALATE": {
+     "ALLOW": 15,
+     "DENY": 19,
+     "REQUEST_EVIDENCE": 3,
+     "ESCALATE": 35
+    }
+   },
+   "conflict_escalations": 35,
+   "conflict_n": 72,
+   "escalation_recall": 0.486,
+   "escalation_recall_ci": [
+    0.389,
+    0.569
+   ],
+   "control_unnecessary_escalations": 8,
+   "control_n": 72,
+   "unnecessary_escalation_rate": 0.111,
+   "unnecessary_escalation_ci": [
+    0.056,
+    0.181
+   ],
+   "unnecessary_escalation_by_status": {
+    "TRUE": 2,
+    "FALSE": 4,
+    "UNKNOWN": 2
+   },
+   "wrong_allow": {
+    "all": 19,
+    "conflict": 15,
+    "controls": 4
+   },
+   "accuracy": {
+    "all": 0.597,
+    "all_ci": [
+     0.528,
+     0.66
+    ],
+    "conflict": 0.486,
+    "controls": 0.708,
+    "controls_ci": [
+     0.625,
+     0.792
+    ]
+   },
+   "decision_distribution": {
+    "ALLOW": 38,
+    "DENY": 31,
+    "REQUEST_EVIDENCE": 32,
+    "ESCALATE": 43
+   },
+   "p_choice_escalate_mean": {
+    "conflict": 0.3826,
+    "controls": 0.1486,
+    "conflict_max": 0.7695
+   },
+   "p_first_escalate_mean": {
+    "conflict": 0.2968,
+    "controls": 0.097
+   },
+   "escalate_discrimination_auroc": 0.806,
+   "escalate_discrimination_auroc_ci": [
+    0.764,
+    0.845
+   ],
+   "transitions_from_A": {
+    "ALLOW->ALLOW": 28,
+    "ALLOW->DENY": 2,
+    "ALLOW->ESCALATE": 1,
+    "DENY->ALLOW": 7,
+    "DENY->DENY": 25,
+    "DENY->ESCALATE": 14,
+    "DENY->REQUEST_EVIDENCE": 3,
+    "REQUEST_EVIDENCE->ALLOW": 3,
+    "REQUEST_EVIDENCE->DENY": 4,
+    "REQUEST_EVIDENCE->ESCALATE": 28,
+    "REQUEST_EVIDENCE->REQUEST_EVIDENCE": 29
+   },
+   "conflict_gained_escalations": 35,
+   "conflict_lost_escalations": 0,
+   "changed_decisions": 62,
+   "escalation_recall_change_vs_A": 0.486,
+   "escalation_recall_change_ci": [
+    0.389,
+    0.569
+   ],
+   "accuracy_change_vs_A": 0.208,
+   "accuracy_change_ci": [
+    0.146,
+    0.271
+   ]
+  }
+ },
+ "norm_first": {
+  "A": {
+   "confusion_gold_rows": {
+    "ALLOW": {
+     "ALLOW": 16,
+     "DENY": 1,
+     "REQUEST_EVIDENCE": 7,
+     "ESCALATE": 0
+    },
+    "DENY": {
+     "ALLOW": 0,
+     "DENY": 16,
+     "REQUEST_EVIDENCE": 8,
+     "ESCALATE": 0
+    },
+    "REQUEST_EVIDENCE": {
+     "ALLOW": 0,
+     "DENY": 2,
+     "REQUEST_EVIDENCE": 22,
+     "ESCALATE": 0
+    },
+    "ESCALATE": {
+     "ALLOW": 15,
+     "DENY": 32,
+     "REQUEST_EVIDENCE": 25,
+     "ESCALATE": 0
+    }
+   },
+   "conflict_escalations": 0,
+   "conflict_n": 72,
+   "escalation_recall": 0.0,
+   "escalation_recall_ci": [
+    0.0,
+    0.0
+   ],
+   "control_unnecessary_escalations": 0,
+   "control_n": 72,
+   "unnecessary_escalation_rate": 0.0,
+   "unnecessary_escalation_ci": [
+    0.0,
+    0.0
+   ],
+   "unnecessary_escalation_by_status": {
+    "TRUE": 0,
+    "FALSE": 0,
+    "UNKNOWN": 0
+   },
+   "wrong_allow": {
+    "all": 15,
+    "conflict": 15,
+    "controls": 0
+   },
+   "accuracy": {
+    "all": 0.375,
+    "all_ci": [
+     0.333,
+     0.417
+    ],
+    "conflict": 0.0,
+    "controls": 0.75,
+    "controls_ci": [
+     0.667,
+     0.833
+    ]
+   },
+   "decision_distribution": {
+    "ALLOW": 31,
+    "DENY": 51,
+    "REQUEST_EVIDENCE": 62,
+    "ESCALATE": 0
+   }
+  },
+  "B": {
+   "confusion_gold_rows": {
+    "ALLOW": {
+     "ALLOW": 16,
+     "DENY": 2,
+     "REQUEST_EVIDENCE": 6,
+     "ESCALATE": 0
+    },
+    "DENY": {
+     "ALLOW": 0,
+     "DENY": 20,
+     "REQUEST_EVIDENCE": 4,
+     "ESCALATE": 0
+    },
+    "REQUEST_EVIDENCE": {
+     "ALLOW": 0,
+     "DENY": 10,
+     "REQUEST_EVIDENCE": 14,
+     "ESCALATE": 0
+    },
+    "ESCALATE": {
+     "ALLOW": 12,
+     "DENY": 47,
+     "REQUEST_EVIDENCE": 13,
+     "ESCALATE": 0
+    }
+   },
+   "conflict_escalations": 0,
+   "conflict_n": 72,
+   "escalation_recall": 0.0,
+   "escalation_recall_ci": [
+    0.0,
+    0.0
+   ],
+   "control_unnecessary_escalations": 0,
+   "control_n": 72,
+   "unnecessary_escalation_rate": 0.0,
+   "unnecessary_escalation_ci": [
+    0.0,
+    0.0
+   ],
+   "unnecessary_escalation_by_status": {
+    "TRUE": 0,
+    "FALSE": 0,
+    "UNKNOWN": 0
+   },
+   "wrong_allow": {
+    "all": 12,
+    "conflict": 12,
+    "controls": 0
+   },
+   "accuracy": {
+    "all": 0.347,
+    "all_ci": [
+     0.299,
+     0.396
+    ],
+    "conflict": 0.0,
+    "controls": 0.694,
+    "controls_ci": [
+     0.597,
+     0.792
+    ]
+   },
+   "decision_distribution": {
+    "ALLOW": 28,
+    "DENY": 79,
+    "REQUEST_EVIDENCE": 37,
+    "ESCALATE": 0
+   },
+   "transitions_from_A": {
+    "ALLOW->ALLOW": 28,
+    "ALLOW->DENY": 3,
+    "DENY->DENY": 51,
+    "REQUEST_EVIDENCE->DENY": 25,
+    "REQUEST_EVIDENCE->REQUEST_EVIDENCE": 37
+   },
+   "conflict_gained_escalations": 0,
+   "conflict_lost_escalations": 0,
+   "changed_decisions": 28,
+   "escalation_recall_change_vs_A": 0.0,
+   "escalation_recall_change_ci": [
+    0.0,
+    0.0
+   ],
+   "accuracy_change_vs_A": -0.028,
+   "accuracy_change_ci": [
+    -0.062,
+    0.0
+   ]
+  },
+  "C": {
+   "confusion_gold_rows": {
+    "ALLOW": {
+     "ALLOW": 17,
+     "DENY": 4,
+     "REQUEST_EVIDENCE": 3,
+     "ESCALATE": 0
+    },
+    "DENY": {
+     "ALLOW": 2,
+     "DENY": 19,
+     "REQUEST_EVIDENCE": 3,
+     "ESCALATE": 0
+    },
+    "REQUEST_EVIDENCE": {
+     "ALLOW": 0,
+     "DENY": 7,
+     "REQUEST_EVIDENCE": 17,
+     "ESCALATE": 0
+    },
+    "ESCALATE": {
+     "ALLOW": 10,
+     "DENY": 38,
+     "REQUEST_EVIDENCE": 3,
+     "ESCALATE": 21
+    }
+   },
+   "conflict_escalations": 21,
+   "conflict_n": 72,
+   "escalation_recall": 0.292,
+   "escalation_recall_ci": [
+    0.194,
+    0.403
+   ],
+   "control_unnecessary_escalations": 0,
+   "control_n": 72,
+   "unnecessary_escalation_rate": 0.0,
+   "unnecessary_escalation_ci": [
+    0.0,
+    0.0
+   ],
+   "unnecessary_escalation_by_status": {
+    "TRUE": 0,
+    "FALSE": 0,
+    "UNKNOWN": 0
+   },
+   "wrong_allow": {
+    "all": 12,
+    "conflict": 10,
+    "controls": 2
+   },
+   "accuracy": {
+    "all": 0.514,
+    "all_ci": [
+     0.458,
+     0.569
+    ],
+    "conflict": 0.292,
+    "controls": 0.736,
+    "controls_ci": [
+     0.639,
+     0.819
+    ]
+   },
+   "decision_distribution": {
+    "ALLOW": 29,
+    "DENY": 68,
+    "REQUEST_EVIDENCE": 26,
+    "ESCALATE": 21
+   },
+   "transitions_from_A": {
+    "ALLOW->ALLOW": 26,
+    "ALLOW->DENY": 3,
+    "ALLOW->ESCALATE": 2,
+    "DENY->ALLOW": 2,
+    "DENY->DENY": 31,
+    "DENY->ESCALATE": 18,
+    "REQUEST_EVIDENCE->ALLOW": 1,
+    "REQUEST_EVIDENCE->DENY": 34,
+    "REQUEST_EVIDENCE->ESCALATE": 1,
+    "REQUEST_EVIDENCE->REQUEST_EVIDENCE": 26
+   },
+   "conflict_gained_escalations": 21,
+   "conflict_lost_escalations": 0,
+   "changed_decisions": 61,
+   "escalation_recall_change_vs_A": 0.292,
+   "escalation_recall_change_ci": [
+    0.194,
+    0.403
+   ],
+   "accuracy_change_vs_A": 0.139,
+   "accuracy_change_ci": [
+    0.083,
+    0.194
+   ]
+  },
+  "D": {
+   "confusion_gold_rows": {
+    "ALLOW": {
+     "ALLOW": 17,
+     "DENY": 0,
+     "REQUEST_EVIDENCE": 7,
+     "ESCALATE": 0
+    },
+    "DENY": {
+     "ALLOW": 1,
+     "DENY": 14,
+     "REQUEST_EVIDENCE": 9,
+     "ESCALATE": 0
+    },
+    "REQUEST_EVIDENCE": {
+     "ALLOW": 0,
+     "DENY": 0,
+     "REQUEST_EVIDENCE": 24,
+     "ESCALATE": 0
+    },
+    "ESCALATE": {
+     "ALLOW": 10,
+     "DENY": 31,
+     "REQUEST_EVIDENCE": 12,
+     "ESCALATE": 19
+    }
+   },
+   "conflict_escalations": 19,
+   "conflict_n": 72,
+   "escalation_recall": 0.264,
+   "escalation_recall_ci": [
+    0.153,
+    0.375
+   ],
+   "control_unnecessary_escalations": 0,
+   "control_n": 72,
+   "unnecessary_escalation_rate": 0.0,
+   "unnecessary_escalation_ci": [
+    0.0,
+    0.0
+   ],
+   "unnecessary_escalation_by_status": {
+    "TRUE": 0,
+    "FALSE": 0,
+    "UNKNOWN": 0
+   },
+   "wrong_allow": {
+    "all": 11,
+    "conflict": 10,
+    "controls": 1
+   },
+   "accuracy": {
+    "all": 0.514,
+    "all_ci": [
+     0.431,
+     0.597
+    ],
+    "conflict": 0.264,
+    "controls": 0.764,
+    "controls_ci": [
+     0.68,
+     0.848
+    ]
+   },
+   "decision_distribution": {
+    "ALLOW": 28,
+    "DENY": 45,
+    "REQUEST_EVIDENCE": 52,
+    "ESCALATE": 19
+   },
+   "transitions_from_A": {
+    "ALLOW->ALLOW": 26,
+    "ALLOW->DENY": 5,
+    "DENY->ALLOW": 2,
+    "DENY->DENY": 34,
+    "DENY->ESCALATE": 10,
+    "DENY->REQUEST_EVIDENCE": 5,
+    "REQUEST_EVIDENCE->DENY": 6,
+    "REQUEST_EVIDENCE->ESCALATE": 9,
+    "REQUEST_EVIDENCE->REQUEST_EVIDENCE": 47
+   },
+   "conflict_gained_escalations": 19,
+   "conflict_lost_escalations": 0,
+   "changed_decisions": 37,
+   "escalation_recall_change_vs_A": 0.264,
+   "escalation_recall_change_ci": [
+    0.153,
+    0.375
+   ],
+   "accuracy_change_vs_A": 0.139,
+   "accuracy_change_ci": [
+    0.069,
+    0.208
+   ]
+  }
+ },
+ "norm_mean": {
+  "A": {
+   "confusion_gold_rows": {
+    "ALLOW": {
+     "ALLOW": 16,
+     "DENY": 0,
+     "REQUEST_EVIDENCE": 8,
+     "ESCALATE": 0
+    },
+    "DENY": {
+     "ALLOW": 0,
+     "DENY": 14,
+     "REQUEST_EVIDENCE": 10,
+     "ESCALATE": 0
+    },
+    "REQUEST_EVIDENCE": {
+     "ALLOW": 0,
+     "DENY": 0,
+     "REQUEST_EVIDENCE": 24,
+     "ESCALATE": 0
+    },
+    "ESCALATE": {
+     "ALLOW": 8,
+     "DENY": 28,
+     "REQUEST_EVIDENCE": 36,
+     "ESCALATE": 0
+    }
+   },
+   "conflict_escalations": 0,
+   "conflict_n": 72,
+   "escalation_recall": 0.0,
+   "escalation_recall_ci": [
+    0.0,
+    0.0
+   ],
+   "control_unnecessary_escalations": 0,
+   "control_n": 72,
+   "unnecessary_escalation_rate": 0.0,
+   "unnecessary_escalation_ci": [
+    0.0,
+    0.0
+   ],
+   "unnecessary_escalation_by_status": {
+    "TRUE": 0,
+    "FALSE": 0,
+    "UNKNOWN": 0
+   },
+   "wrong_allow": {
+    "all": 8,
+    "conflict": 8,
+    "controls": 0
+   },
+   "accuracy": {
+    "all": 0.375,
+    "all_ci": [
+     0.34,
+     0.41
+    ],
+    "conflict": 0.0,
+    "controls": 0.75,
+    "controls_ci": [
+     0.681,
+     0.819
+    ]
+   },
+   "decision_distribution": {
+    "ALLOW": 24,
+    "DENY": 42,
+    "REQUEST_EVIDENCE": 78,
+    "ESCALATE": 0
+   }
+  },
+  "B": {
+   "confusion_gold_rows": {
+    "ALLOW": {
+     "ALLOW": 16,
+     "DENY": 1,
+     "REQUEST_EVIDENCE": 7,
+     "ESCALATE": 0
+    },
+    "DENY": {
+     "ALLOW": 0,
+     "DENY": 16,
+     "REQUEST_EVIDENCE": 8,
+     "ESCALATE": 0
+    },
+    "REQUEST_EVIDENCE": {
+     "ALLOW": 0,
+     "DENY": 7,
+     "REQUEST_EVIDENCE": 17,
+     "ESCALATE": 0
+    },
+    "ESCALATE": {
+     "ALLOW": 9,
+     "DENY": 36,
+     "REQUEST_EVIDENCE": 26,
+     "ESCALATE": 1
+    }
+   },
+   "conflict_escalations": 1,
+   "conflict_n": 72,
+   "escalation_recall": 0.014,
+   "escalation_recall_ci": [
+    0.0,
+    0.042
+   ],
+   "control_unnecessary_escalations": 0,
+   "control_n": 72,
+   "unnecessary_escalation_rate": 0.0,
+   "unnecessary_escalation_ci": [
+    0.0,
+    0.0
+   ],
+   "unnecessary_escalation_by_status": {
+    "TRUE": 0,
+    "FALSE": 0,
+    "UNKNOWN": 0
+   },
+   "wrong_allow": {
+    "all": 9,
+    "conflict": 9,
+    "controls": 0
+   },
+   "accuracy": {
+    "all": 0.347,
+    "all_ci": [
+     0.299,
+     0.396
+    ],
+    "conflict": 0.014,
+    "controls": 0.681,
+    "controls_ci": [
+     0.569,
+     0.792
+    ]
+   },
+   "decision_distribution": {
+    "ALLOW": 25,
+    "DENY": 60,
+    "REQUEST_EVIDENCE": 58,
+    "ESCALATE": 1
+   },
+   "transitions_from_A": {
+    "ALLOW->ALLOW": 24,
+    "DENY->DENY": 41,
+    "DENY->ESCALATE": 1,
+    "REQUEST_EVIDENCE->ALLOW": 1,
+    "REQUEST_EVIDENCE->DENY": 19,
+    "REQUEST_EVIDENCE->REQUEST_EVIDENCE": 58
+   },
+   "conflict_gained_escalations": 1,
+   "conflict_lost_escalations": 0,
+   "changed_decisions": 21,
+   "escalation_recall_change_vs_A": 0.014,
+   "escalation_recall_change_ci": [
+    0.0,
+    0.042
+   ],
+   "accuracy_change_vs_A": -0.028,
+   "accuracy_change_ci": [
+    -0.062,
+    0.007
+   ]
+  },
+  "C": {
+   "confusion_gold_rows": {
+    "ALLOW": {
+     "ALLOW": 19,
+     "DENY": 4,
+     "REQUEST_EVIDENCE": 1,
+     "ESCALATE": 0
+    },
+    "DENY": {
+     "ALLOW": 2,
+     "DENY": 20,
+     "REQUEST_EVIDENCE": 2,
+     "ESCALATE": 0
+    },
+    "REQUEST_EVIDENCE": {
+     "ALLOW": 0,
+     "DENY": 12,
+     "REQUEST_EVIDENCE": 12,
+     "ESCALATE": 0
+    },
+    "ESCALATE": {
+     "ALLOW": 12,
+     "DENY": 41,
+     "REQUEST_EVIDENCE": 2,
+     "ESCALATE": 17
+    }
+   },
+   "conflict_escalations": 17,
+   "conflict_n": 72,
+   "escalation_recall": 0.236,
+   "escalation_recall_ci": [
+    0.153,
+    0.319
+   ],
+   "control_unnecessary_escalations": 0,
+   "control_n": 72,
+   "unnecessary_escalation_rate": 0.0,
+   "unnecessary_escalation_ci": [
+    0.0,
+    0.0
+   ],
+   "unnecessary_escalation_by_status": {
+    "TRUE": 0,
+    "FALSE": 0,
+    "UNKNOWN": 0
+   },
+   "wrong_allow": {
+    "all": 14,
+    "conflict": 12,
+    "controls": 2
+   },
+   "accuracy": {
+    "all": 0.472,
+    "all_ci": [
+     0.417,
+     0.528
+    ],
+    "conflict": 0.236,
+    "controls": 0.708,
+    "controls_ci": [
+     0.611,
+     0.806
+    ]
+   },
+   "decision_distribution": {
+    "ALLOW": 33,
+    "DENY": 77,
+    "REQUEST_EVIDENCE": 17,
+    "ESCALATE": 17
+   },
+   "transitions_from_A": {
+    "ALLOW->ALLOW": 24,
+    "DENY->ALLOW": 3,
+    "DENY->DENY": 28,
+    "DENY->ESCALATE": 11,
+    "REQUEST_EVIDENCE->ALLOW": 6,
+    "REQUEST_EVIDENCE->DENY": 49,
+    "REQUEST_EVIDENCE->ESCALATE": 6,
+    "REQUEST_EVIDENCE->REQUEST_EVIDENCE": 17
+   },
+   "conflict_gained_escalations": 17,
+   "conflict_lost_escalations": 0,
+   "changed_decisions": 75,
+   "escalation_recall_change_vs_A": 0.236,
+   "escalation_recall_change_ci": [
+    0.153,
+    0.319
+   ],
+   "accuracy_change_vs_A": 0.097,
+   "accuracy_change_ci": [
+    0.049,
+    0.146
+   ]
+  },
+  "D": {
+   "confusion_gold_rows": {
+    "ALLOW": {
+     "ALLOW": 19,
+     "DENY": 0,
+     "REQUEST_EVIDENCE": 3,
+     "ESCALATE": 2
+    },
+    "DENY": {
+     "ALLOW": 4,
+     "DENY": 11,
+     "REQUEST_EVIDENCE": 5,
+     "ESCALATE": 4
+    },
+    "REQUEST_EVIDENCE": {
+     "ALLOW": 0,
+     "DENY": 1,
+     "REQUEST_EVIDENCE": 21,
+     "ESCALATE": 2
+    },
+    "ESCALATE": {
+     "ALLOW": 15,
+     "DENY": 19,
+     "REQUEST_EVIDENCE": 3,
+     "ESCALATE": 35
+    }
+   },
+   "conflict_escalations": 35,
+   "conflict_n": 72,
+   "escalation_recall": 0.486,
+   "escalation_recall_ci": [
+    0.389,
+    0.569
+   ],
+   "control_unnecessary_escalations": 8,
+   "control_n": 72,
+   "unnecessary_escalation_rate": 0.111,
+   "unnecessary_escalation_ci": [
+    0.056,
+    0.181
+   ],
+   "unnecessary_escalation_by_status": {
+    "TRUE": 2,
+    "FALSE": 4,
+    "UNKNOWN": 2
+   },
+   "wrong_allow": {
+    "all": 19,
+    "conflict": 15,
+    "controls": 4
+   },
+   "accuracy": {
+    "all": 0.597,
+    "all_ci": [
+     0.528,
+     0.66
+    ],
+    "conflict": 0.486,
+    "controls": 0.708,
+    "controls_ci": [
+     0.625,
+     0.792
+    ]
+   },
+   "decision_distribution": {
+    "ALLOW": 38,
+    "DENY": 31,
+    "REQUEST_EVIDENCE": 32,
+    "ESCALATE": 43
+   },
+   "transitions_from_A": {
+    "ALLOW->ALLOW": 24,
+    "DENY->ALLOW": 9,
+    "DENY->DENY": 22,
+    "DENY->ESCALATE": 9,
+    "DENY->REQUEST_EVIDENCE": 2,
+    "REQUEST_EVIDENCE->ALLOW": 5,
+    "REQUEST_EVIDENCE->DENY": 9,
+    "REQUEST_EVIDENCE->ESCALATE": 34,
+    "REQUEST_EVIDENCE->REQUEST_EVIDENCE": 30
+   },
+   "conflict_gained_escalations": 35,
+   "conflict_lost_escalations": 0,
+   "changed_decisions": 68,
+   "escalation_recall_change_vs_A": 0.486,
+   "escalation_recall_change_ci": [
+    0.389,
+    0.569
+   ],
+   "accuracy_change_vs_A": 0.222,
+   "accuracy_change_ci": [
+    0.16,
+    0.285
+   ]
+  }
+ },
+ "freegen_agreement": {
+  "A": "12/12",
+  "B": "12/12",
+  "C": "12/12",
+  "D": "8/12"
+ },
+ "freegen_invalid": 0,
+ "freegen_rows": [
+  {
+   "condition": "A",
+   "item_id": "f153389271",
+   "role": "conflict",
+   "forced": "ALLOW",
+   "generated": "ALLOW",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "ALLOW\nThe evidence explicitly states that Elif Sandoval signed off, which satisfies the policy requirement that at least"
+  },
+  {
+   "condition": "A",
+   "item_id": "b09d9ebc7f",
+   "role": "control_UNKNOWN",
+   "forced": "REQUEST_EVIDENCE",
+   "generated": "REQUEST_EVIDENCE",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "REQUEST_EVIDENCE\nThe evidence confirms authorization from three of the four listed matter partners but does not state wh"
+  },
+  {
+   "condition": "A",
+   "item_id": "93bcf76470",
+   "role": "conflict",
+   "forced": "REQUEST_EVIDENCE",
+   "generated": "REQUEST_EVIDENCE",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "REQUEST_EVIDENCE\nThe evidence does not provide the total number of pages for exports SE-701 and SE-702, making it imposs"
+  },
+  {
+   "condition": "A",
+   "item_id": "7a4e1067c6",
+   "role": "control_TRUE",
+   "forced": "REQUEST_EVIDENCE",
+   "generated": "REQUEST_EVIDENCE",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "REQUEST_EVIDENCE\nThe evidence does not state that the list of chapter releases is complete, so it is unknown whether the"
+  },
+  {
+   "condition": "A",
+   "item_id": "d662a23c5c",
+   "role": "control_FALSE",
+   "forced": "REQUEST_EVIDENCE",
+   "generated": "REQUEST_EVIDENCE",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "REQUEST_EVIDENCE\nThe evidence does not state that the list of staged rollouts is complete, so it is unknown if the total"
+  },
+  {
+   "condition": "A",
+   "item_id": "8383cf6410",
+   "role": "conflict",
+   "forced": "DENY",
+   "generated": "DENY",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "DENY\nThe evidence shows that while three custodians approved the migration, the policy requires approval from every list"
+  },
+  {
+   "condition": "A",
+   "item_id": "e24388b942",
+   "role": "control_UNKNOWN",
+   "forced": "REQUEST_EVIDENCE",
+   "generated": "REQUEST_EVIDENCE",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "REQUEST_EVIDENCE\nThe evidence confirms approval from only three of the four required custodians, and there is no record "
+  },
+  {
+   "condition": "A",
+   "item_id": "38fbfece54",
+   "role": "conflict",
+   "forced": "DENY",
+   "generated": "DENY",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "DENY\nThe evidence contains contradictory statements regarding Aoife Brennan's approval status, which prevents a definiti"
+  },
+  {
+   "condition": "A",
+   "item_id": "888c9511ad",
+   "role": "control_TRUE",
+   "forced": "ALLOW",
+   "generated": "ALLOW",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "ALLOW\nThe evidence confirms that Aoife Brennan, who is listed as a control engineer, approved the firmware push, satisfy"
+  },
+  {
+   "condition": "A",
+   "item_id": "1bc1af40d1",
+   "role": "control_FALSE",
+   "forced": "DENY",
+   "generated": "DENY",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "DENY\nThe evidence explicitly states that steward Aditi Rao declined the export, which violates the policy requiring appr"
+  },
+  {
+   "condition": "A",
+   "item_id": "8d29eea428",
+   "role": "conflict",
+   "forced": "REQUEST_EVIDENCE",
+   "generated": "REQUEST_EVIDENCE",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "REQUEST_EVIDENCE\nThe evidence contains contradictory row counts for DP-14 (1,800 in the forum vs. 600 in the log) and fa"
+  },
+  {
+   "condition": "A",
+   "item_id": "d2ee58315e",
+   "role": "conflict",
+   "forced": "ALLOW",
+   "generated": "ALLOW",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "ALLOW\nThe evidence from the Payment approval log explicitly states that Samir Haddad, a listed budget holder, approved t"
+  },
+  {
+   "condition": "B",
+   "item_id": "f153389271",
+   "role": "conflict",
+   "forced": "DENY",
+   "generated": "DENY",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "DENY\nThe evidence explicitly states that Elif Sandoval refused sign-off, which directly contradicts the later statement "
+  },
+  {
+   "condition": "B",
+   "item_id": "b09d9ebc7f",
+   "role": "control_UNKNOWN",
+   "forced": "REQUEST_EVIDENCE",
+   "generated": "REQUEST_EVIDENCE",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "REQUEST_EVIDENCE\nThe evidence confirms authorization from three of the four listed matter partners but does not state wh"
+  },
+  {
+   "condition": "B",
+   "item_id": "93bcf76470",
+   "role": "conflict",
+   "forced": "REQUEST_EVIDENCE",
+   "generated": "REQUEST_EVIDENCE",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "REQUEST_EVIDENCE\nThe evidence does not provide the total number of pages for exports SE-701 and SE-702, making it imposs"
+  },
+  {
+   "condition": "B",
+   "item_id": "7a4e1067c6",
+   "role": "control_TRUE",
+   "forced": "REQUEST_EVIDENCE",
+   "generated": "REQUEST_EVIDENCE",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "REQUEST_EVIDENCE\nThe evidence does not state that the list of chapter releases is complete, so it is unknown whether the"
+  },
+  {
+   "condition": "B",
+   "item_id": "d662a23c5c",
+   "role": "control_FALSE",
+   "forced": "REQUEST_EVIDENCE",
+   "generated": "REQUEST_EVIDENCE",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "REQUEST_EVIDENCE\nThe evidence does not state the total percentage points of user exposure for the previous staged rollou"
+  },
+  {
+   "condition": "B",
+   "item_id": "8383cf6410",
+   "role": "conflict",
+   "forced": "DENY",
+   "generated": "DENY",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "DENY\nThe evidence shows that Valentina Cruz both approved the migration and declined it, creating a contradiction regard"
+  },
+  {
+   "condition": "B",
+   "item_id": "e24388b942",
+   "role": "control_UNKNOWN",
+   "forced": "REQUEST_EVIDENCE",
+   "generated": "REQUEST_EVIDENCE",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "REQUEST_EVIDENCE\nThe evidence confirms approval from only three of the four required custodians, and there is no record "
+  },
+  {
+   "condition": "B",
+   "item_id": "38fbfece54",
+   "role": "conflict",
+   "forced": "DENY",
+   "generated": "DENY",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "DENY\nThe evidence contains contradictory statements regarding Aoife Brennan's approval status, which prevents a definiti"
+  },
+  {
+   "condition": "B",
+   "item_id": "888c9511ad",
+   "role": "control_TRUE",
+   "forced": "ALLOW",
+   "generated": "ALLOW",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "ALLOW\nThe evidence confirms that Aoife Brennan, who is listed as a control engineer, approved the firmware push, satisfy"
+  },
+  {
+   "condition": "B",
+   "item_id": "1bc1af40d1",
+   "role": "control_FALSE",
+   "forced": "DENY",
+   "generated": "DENY",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "DENY\nThe evidence explicitly states that steward Aditi Rao declined the export, which violates the policy requiring appr"
+  },
+  {
+   "condition": "B",
+   "item_id": "8d29eea428",
+   "role": "conflict",
+   "forced": "REQUEST_EVIDENCE",
+   "generated": "REQUEST_EVIDENCE",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "REQUEST_EVIDENCE\nThe evidence contains contradictory row counts for dataset DP-14 (1,800 in the forum log vs. 600 in the"
+  },
+  {
+   "condition": "B",
+   "item_id": "d2ee58315e",
+   "role": "conflict",
+   "forced": "ALLOW",
+   "generated": "ALLOW",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "ALLOW\nThe evidence from the Payment approval log explicitly states that Samir Haddad, a listed budget holder, approved t"
+  },
+  {
+   "condition": "C",
+   "item_id": "f153389271",
+   "role": "conflict",
+   "forced": "DENY",
+   "generated": "DENY",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "C\nThe evidence explicitly states that Elif Sandoval refused sign-off, which directly contradicts the later statement tha"
+  },
+  {
+   "condition": "C",
+   "item_id": "b09d9ebc7f",
+   "role": "control_UNKNOWN",
+   "forced": "REQUEST_EVIDENCE",
+   "generated": "REQUEST_EVIDENCE",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "D\nThe evidence confirms authorization from three of the four listed matter partners but does not state whether Selin Aba"
+  },
+  {
+   "condition": "C",
+   "item_id": "93bcf76470",
+   "role": "conflict",
+   "forced": "DENY",
+   "generated": "DENY",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "C = DENY: The evidence explicitly states that the current export ceiling for SE-703 is 330 pages, and adding 40 pages wo"
+  },
+  {
+   "condition": "C",
+   "item_id": "7a4e1067c6",
+   "role": "control_TRUE",
+   "forced": "REQUEST_EVIDENCE",
+   "generated": "REQUEST_EVIDENCE",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "D = REQUEST_EVIDENCE\nThe evidence lists three chapter releases (CR-14, CR-15, CR-16) but does not provide the total numb"
+  },
+  {
+   "condition": "C",
+   "item_id": "d662a23c5c",
+   "role": "control_FALSE",
+   "forced": "ALLOW",
+   "generated": "ALLOW",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "B\nThe total exposure is 95 points (30+20+45), which plus the requested 20 points equals 115, but the policy condition is"
+  },
+  {
+   "condition": "C",
+   "item_id": "8383cf6410",
+   "role": "conflict",
+   "forced": "DENY",
+   "generated": "DENY",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "C\nThe evidence shows that while three custodians approved the migration, the DBA on-call handover record explicitly stat"
+  },
+  {
+   "condition": "C",
+   "item_id": "e24388b942",
+   "role": "control_UNKNOWN",
+   "forced": "DENY",
+   "generated": "DENY",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "C\nThe evidence explicitly states that Julian Park approved the migration, but the policy requires approval from all four"
+  },
+  {
+   "condition": "C",
+   "item_id": "38fbfece54",
+   "role": "conflict",
+   "forced": "ESCALATE",
+   "generated": "ESCALATE",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "A\nThe evidence contains contradictory statements regarding Aoife Brennan's approval status, which prevents determining i"
+  },
+  {
+   "condition": "C",
+   "item_id": "888c9511ad",
+   "role": "control_TRUE",
+   "forced": "ALLOW",
+   "generated": "ALLOW",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "B\nThe evidence shows that Aoife Brennan, who is on the list of authorized control engineers, approved the firmware push."
+  },
+  {
+   "condition": "C",
+   "item_id": "1bc1af40d1",
+   "role": "control_FALSE",
+   "forced": "DENY",
+   "generated": "DENY",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "C\nThe evidence explicitly states that steward Aditi Rao declined the export, which violates the policy requiring approva"
+  },
+  {
+   "condition": "C",
+   "item_id": "8d29eea428",
+   "role": "conflict",
+   "forced": "DENY",
+   "generated": "DENY",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "C\nThe evidence contains contradictory statements regarding the row count for DP-14 (1,800 in the forum vs. 600 in the lo"
+  },
+  {
+   "condition": "C",
+   "item_id": "d2ee58315e",
+   "role": "conflict",
+   "forced": "ALLOW",
+   "generated": "ALLOW",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "B\nThe evidence from the Payment approval log explicitly states that Samir Haddad, a listed budget holder, approved the p"
+  },
+  {
+   "condition": "D",
+   "item_id": "f153389271",
+   "role": "conflict",
+   "forced": "DENY",
+   "generated": "DENY",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "A\nThe evidence explicitly states that Elif Sandoval refused sign-off, which directly contradicts the final record claimi"
+  },
+  {
+   "condition": "D",
+   "item_id": "b09d9ebc7f",
+   "role": "control_UNKNOWN",
+   "forced": "REQUEST_EVIDENCE",
+   "generated": "REQUEST_EVIDENCE",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "B = REQUEST_EVIDENCE\nThe evidence confirms authorization from three of the four listed matter partners but does not stat"
+  },
+  {
+   "condition": "D",
+   "item_id": "93bcf76470",
+   "role": "conflict",
+   "forced": "ESCALATE",
+   "generated": "REQUEST_EVIDENCE",
+   "parse_status": "STRICT",
+   "agree": false,
+   "text": "B = REQUEST_EVIDENCE\nThe evidence provides page counts for individual exports but does not state the total pages exporte"
+  },
+  {
+   "condition": "D",
+   "item_id": "7a4e1067c6",
+   "role": "control_TRUE",
+   "forced": "REQUEST_EVIDENCE",
+   "generated": "REQUEST_EVIDENCE",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "B = REQUEST_EVIDENCE\nThe evidence lists three chapter releases but fails to provide the total chapter counts for CR-15 a"
+  },
+  {
+   "condition": "D",
+   "item_id": "d662a23c5c",
+   "role": "control_FALSE",
+   "forced": "ALLOW",
+   "generated": "REQUEST_EVIDENCE",
+   "parse_status": "STRICT",
+   "agree": false,
+   "text": "B = REQUEST_EVIDENCE\nThe evidence lists three prior rollouts with specific point values (30, 20, and 45), but it does no"
+  },
+  {
+   "condition": "D",
+   "item_id": "8383cf6410",
+   "role": "conflict",
+   "forced": "ESCALATE",
+   "generated": "DENY",
+   "parse_status": "STRICT",
+   "agree": false,
+   "text": "A = DENY: The evidence shows that Valentina Cruz both approved the migration in the log and declined it during the hando"
+  },
+  {
+   "condition": "D",
+   "item_id": "e24388b942",
+   "role": "control_UNKNOWN",
+   "forced": "REQUEST_EVIDENCE",
+   "generated": "REQUEST_EVIDENCE",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "B = REQUEST_EVIDENCE\nThe evidence confirms approval from three custodians but does not state whether Valentina Cruz has "
+  },
+  {
+   "condition": "D",
+   "item_id": "38fbfece54",
+   "role": "conflict",
+   "forced": "ESCALATE",
+   "generated": "ESCALATE",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "C\nThe evidence contains contradictory statements regarding Aoife Brennan's approval status, which prevents a definitive "
+  },
+  {
+   "condition": "D",
+   "item_id": "888c9511ad",
+   "role": "control_TRUE",
+   "forced": "ALLOW",
+   "generated": "ALLOW",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "D\nThe evidence explicitly states that Aoife Brennan, a listed control engineer, approved the firmware push, satisfying t"
+  },
+  {
+   "condition": "D",
+   "item_id": "1bc1af40d1",
+   "role": "control_FALSE",
+   "forced": "DENY",
+   "generated": "DENY",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "A = DENY\nThe evidence explicitly states that steward Aditi Rao declined the export, violating the policy requirement tha"
+  },
+  {
+   "condition": "D",
+   "item_id": "8d29eea428",
+   "role": "conflict",
+   "forced": "ESCALATE",
+   "generated": "REQUEST_EVIDENCE",
+   "parse_status": "STRICT",
+   "agree": false,
+   "text": "B = REQUEST_EVIDENCE\nThe evidence contains contradictory row counts for DP-14 (1,800 in the forum vs. 600 in the log) an"
+  },
+  {
+   "condition": "D",
+   "item_id": "d2ee58315e",
+   "role": "conflict",
+   "forced": "ALLOW",
+   "generated": "ALLOW",
+   "parse_status": "STRICT",
+   "agree": true,
+   "text": "D\nThe evidence from the Payment approval log explicitly states that Samir Haddad, a listed budget holder, approved the p"
+  }
+ ]
+}

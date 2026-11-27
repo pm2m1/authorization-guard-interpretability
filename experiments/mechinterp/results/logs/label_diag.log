@@ -1,0 +1,76 @@
+== replay
+W1127 03:31:10.804000 98324 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/760 [00:00<?, ?it/s]Loading weights:  43%|████▎     | 326/760 [00:00<00:00, 3238.08it/s]Loading weights: 100%|██████████| 760/760 [00:00<00:00, 5882.35it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+replay all bitwise equal: True 8
+== primary
+W1127 03:32:07.282000 98383 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/760 [00:00<?, ?it/s]Loading weights: 100%|██████████| 760/760 [00:00<00:00, 11837.27it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+B 48
+B 96
+B 144
+C 48
+C 96
+C 144
+D 48
+D 96
+D 144
+== freegen
+W1127 03:53:17.834000 98973 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/760 [00:00<?, ?it/s]Loading weights:  40%|████      | 306/760 [00:00<00:00, 3042.81it/s]Loading weights: 100%|██████████| 760/760 [00:00<00:00, 5127.90it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+A f153389271 ALLOW STRICT 'ALLOW\nThe evidence explicitly states tha'
+A b09d9ebc7f REQUEST_EVIDENCE STRICT 'REQUEST_EVIDENCE\nThe evidence confirms a'
+A 93bcf76470 REQUEST_EVIDENCE STRICT 'REQUEST_EVIDENCE\nThe evidence does not p'
+A 7a4e1067c6 REQUEST_EVIDENCE STRICT 'REQUEST_EVIDENCE\nThe evidence does not s'
+A d662a23c5c REQUEST_EVIDENCE STRICT 'REQUEST_EVIDENCE\nThe evidence does not s'
+A 8383cf6410 DENY STRICT 'DENY\nThe evidence shows that while three'
+A e24388b942 REQUEST_EVIDENCE STRICT 'REQUEST_EVIDENCE\nThe evidence confirms a'
+A 38fbfece54 DENY STRICT 'DENY\nThe evidence contains contradictory'
+A 888c9511ad ALLOW STRICT 'ALLOW\nThe evidence confirms that Aoife B'
+A 1bc1af40d1 DENY STRICT 'DENY\nThe evidence explicitly states that'
+A 8d29eea428 REQUEST_EVIDENCE STRICT 'REQUEST_EVIDENCE\nThe evidence contains c'
+A d2ee58315e ALLOW STRICT 'ALLOW\nThe evidence from the Payment appr'
+B f153389271 DENY STRICT 'DENY\nThe evidence explicitly states that'
+B b09d9ebc7f REQUEST_EVIDENCE STRICT 'REQUEST_EVIDENCE\nThe evidence confirms a'
+B 93bcf76470 REQUEST_EVIDENCE STRICT 'REQUEST_EVIDENCE\nThe evidence does not p'
+B 7a4e1067c6 REQUEST_EVIDENCE STRICT 'REQUEST_EVIDENCE\nThe evidence does not s'
+B d662a23c5c REQUEST_EVIDENCE STRICT 'REQUEST_EVIDENCE\nThe evidence does not s'
+B 8383cf6410 DENY STRICT 'DENY\nThe evidence shows that Valentina C'
+B e24388b942 REQUEST_EVIDENCE STRICT 'REQUEST_EVIDENCE\nThe evidence confirms a'
+B 38fbfece54 DENY STRICT 'DENY\nThe evidence contains contradictory'
+B 888c9511ad ALLOW STRICT 'ALLOW\nThe evidence confirms that Aoife B'
+B 1bc1af40d1 DENY STRICT 'DENY\nThe evidence explicitly states that'
+B 8d29eea428 REQUEST_EVIDENCE STRICT 'REQUEST_EVIDENCE\nThe evidence contains c'
+B d2ee58315e ALLOW STRICT 'ALLOW\nThe evidence from the Payment appr'
+C f153389271 DENY STRICT 'C\nThe evidence explicitly states that El'
+C b09d9ebc7f REQUEST_EVIDENCE STRICT 'D\nThe evidence confirms authorization fr'
+C 93bcf76470 DENY STRICT 'C = DENY: The evidence explicitly states'
+C 7a4e1067c6 REQUEST_EVIDENCE STRICT 'D = REQUEST_EVIDENCE\nThe evidence lists '
+C d662a23c5c ALLOW STRICT 'B\nThe total exposure is 95 points (30+20'
+C 8383cf6410 DENY STRICT 'C\nThe evidence shows that while three cu'
+C e24388b942 DENY STRICT 'C\nThe evidence explicitly states that Ju'
+C 38fbfece54 ESCALATE STRICT 'A\nThe evidence contains contradictory st'
+C 888c9511ad ALLOW STRICT 'B\nThe evidence shows that Aoife Brennan,'
+C 1bc1af40d1 DENY STRICT 'C\nThe evidence explicitly states that st'
+C 8d29eea428 DENY STRICT 'C\nThe evidence contains contradictory st'
+C d2ee58315e ALLOW STRICT 'B\nThe evidence from the Payment approval'
+D f153389271 DENY STRICT 'A\nThe evidence explicitly states that El'
+D b09d9ebc7f REQUEST_EVIDENCE STRICT 'B = REQUEST_EVIDENCE\nThe evidence confir'
+D 93bcf76470 REQUEST_EVIDENCE STRICT 'B = REQUEST_EVIDENCE\nThe evidence provid'
+D 7a4e1067c6 REQUEST_EVIDENCE STRICT 'B = REQUEST_EVIDENCE\nThe evidence lists '
+D d662a23c5c REQUEST_EVIDENCE STRICT 'B = REQUEST_EVIDENCE\nThe evidence lists '
+D 8383cf6410 DENY STRICT 'A = DENY: The evidence shows that Valent'
+D e24388b942 REQUEST_EVIDENCE STRICT 'B = REQUEST_EVIDENCE\nThe evidence confir'
+D 38fbfece54 ESCALATE STRICT 'C\nThe evidence contains contradictory st'
+D 888c9511ad ALLOW STRICT 'D\nThe evidence explicitly states that Ao'
+D 1bc1af40d1 DENY STRICT 'A = DENY\nThe evidence explicitly states '
+D 8d29eea428 REQUEST_EVIDENCE STRICT 'B = REQUEST_EVIDENCE\nThe evidence contai'
+D d2ee58315e ALLOW STRICT 'D\nThe evidence from the Payment approval'
+exit 0

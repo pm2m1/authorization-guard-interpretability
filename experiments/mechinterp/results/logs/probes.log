@@ -1,0 +1,301 @@
+primary_direct A structured 1.0 2s
+primary_direct A tfidf 0.454 6s
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 20 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+primary_direct A act_7_last 0.555 238s
+primary_direct A act_7_user_mean 0.737 482s
+primary_direct A act_15_last 0.717 719s
+primary_direct A act_15_user_mean 0.852 956s
+primary_direct A act_23_last 0.845 1178s
+primary_direct A act_23_user_mean 0.733 1425s
+primary_direct A act_31_last 0.828 1647s
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 19 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+primary_direct A act_31_user_mean 0.597 1870s
+primary_direct B structured 0.955 1870s
+primary_direct B tfidf 0.732 1873s
+primary_direct B text+margin 0.838 1876s
+primary_direct B structured+margin 0.969 1877s
+primary_direct B act_7_last 0.844 1885s
+primary_direct B act_7_user_mean 0.845 1894s
+primary_direct B act_15_last 0.86 1904s
+primary_direct B act_15_user_mean 0.902 1913s
+primary_direct B act_23_last 0.918 1922s
+primary_direct B act_23_user_mean 0.869 1932s
+primary_direct B act_31_last 0.919 1941s
+primary_direct B act_31_user_mean 0.825 1950s
+primary_direct B act_7_last+text+margin 0.839 1964s
+primary_direct B act_7_user_mean+text+margin 0.853 1978s
+primary_direct B act_15_last+text+margin 0.869 1992s
+primary_direct B act_15_user_mean+text+margin 0.908 2005s
+primary_direct B act_23_last+text+margin 0.918 2019s
+primary_direct B act_23_user_mean+text+margin 0.883 2033s
+primary_direct B act_31_last+text+margin 0.919 2046s
+primary_direct B act_31_user_mean+text+margin 0.839 2061s
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 9 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 146 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+primary_direct perm act_7_last {'mean': 0.502, 'q95': 0.557, 'max': 0.577, 'n': 100} 3091s
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 11 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+primary_direct perm act_7_user_mean {'mean': 0.503, 'q95': 0.548, 'max': 0.572, 'n': 100} 4040s
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 18 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+primary_direct perm act_15_last {'mean': 0.498, 'q95': 0.549, 'max': 0.563, 'n': 100} 4980s
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 147 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 20 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 19 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 32 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 22 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+primary_direct perm act_15_user_mean {'mean': 0.502, 'q95': 0.558, 'max': 0.591, 'n': 100} 5822s
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 21 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+primary_direct perm act_23_last {'mean': 0.499, 'q95': 0.558, 'max': 0.592, 'n': 100} 6578s
+primary_direct perm act_23_user_mean {'mean': 0.503, 'q95': 0.562, 'max': 0.572, 'n': 100} 7343s
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 89 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+primary_direct perm act_31_last {'mean': 0.508, 'q95': 0.557, 'max': 0.592, 'n': 100} 8097s
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 20 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 20 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+primary_direct perm act_31_user_mean {'mean': 0.503, 'q95': 0.56, 'max': 0.632, 'n': 100} 8872s
+stress_dual A structured 1.0 8872s
+stress_dual A tfidf 0.457 8875s
+stress_dual A act_7_last 0.548 9067s
+stress_dual A act_7_user_mean 0.704 9273s
+stress_dual A act_15_last 0.658 9469s
+stress_dual A act_15_user_mean 0.848 9675s
+stress_dual A act_23_last 0.823 9879s
+stress_dual A act_23_user_mean 0.705 10088s
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 25 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+stress_dual A act_31_last 0.791 10304s
+stress_dual A act_31_user_mean 0.594 10507s
+stress_dual B structured 0.868 10507s
+stress_dual B tfidf 0.7 10510s
+stress_dual B text+margin 0.741 10513s
+stress_dual B structured+margin 0.894 10513s
+stress_dual B act_7_last 0.734 10521s
+stress_dual B act_7_user_mean 0.781 10529s
+stress_dual B act_15_last 0.824 10537s
+stress_dual B act_15_user_mean 0.874 10545s
+stress_dual B act_23_last 0.895 10554s
+stress_dual B act_23_user_mean 0.809 10562s
+stress_dual B act_31_last 0.883 10570s
+stress_dual B act_31_user_mean 0.707 10578s
+stress_dual B act_7_last+text+margin 0.742 10591s
+stress_dual B act_7_user_mean+text+margin 0.802 10604s
+stress_dual B act_15_last+text+margin 0.817 10616s
+stress_dual B act_15_user_mean+text+margin 0.875 10628s
+stress_dual B act_23_last+text+margin 0.895 10640s
+stress_dual B act_23_user_mean+text+margin 0.82 10653s
+stress_dual B act_31_last+text+margin 0.883 10666s
+stress_dual B act_31_user_mean+text+margin 0.708 10678s
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 80 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+stress_dual perm act_7_last {'mean': 0.499, 'q95': 0.567, 'max': 0.599, 'n': 100} 11576s
+stress_dual perm act_7_user_mean {'mean': 0.502, 'q95': 0.553, 'max': 0.574, 'n': 100} 12371s
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 18 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 20 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+stress_dual perm act_15_last {'mean': 0.504, 'q95': 0.557, 'max': 0.589, 'n': 100} 13147s
+stress_dual perm act_15_user_mean {'mean': 0.489, 'q95': 0.547, 'max': 0.586, 'n': 100} 13928s
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 23 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 19 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+stress_dual perm act_23_last {'mean': 0.497, 'q95': 0.557, 'max': 0.594, 'n': 100} 14706s
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 20 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 20 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+stress_dual perm act_23_user_mean {'mean': 0.504, 'q95': 0.56, 'max': 0.59, 'n': 100} 15490s
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 21 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 22 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 22 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+stress_dual perm act_31_last {'mean': 0.505, 'q95': 0.567, 'max': 0.581, 'n': 100} 16270s
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 19 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+~/research/aim-safety-research/experiments/mechinterp/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:599: ConvergenceWarning: lbfgs failed to converge after 19 iteration(s) (status=2):
+ABNORMAL: 
+
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+stress_dual perm act_31_user_mean {'mean': 0.507, 'q95': 0.552, 'max': 0.591, 'n': 100} 17053s
+exit 0

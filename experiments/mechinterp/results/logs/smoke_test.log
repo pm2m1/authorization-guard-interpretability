@@ -1,0 +1,20 @@
+W1126 19:48:37.483000 85084 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/760 [00:00<?, ?it/s]Loading weights: 100%|██████████| 760/760 [00:00<00:00, 8730.71it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+0 DENY DENY DENY 12.5
+1 ALLOW ALLOW ALLOW 7.3
+2 REQUEST_EVIDENCE REQUEST_EVIDENCE REQUEST_EVIDENCE 9.0
+3 DENY DENY DENY 9.8
+4 DENY DENY DENY 6.0
+5 DENY DENY ALLOW 6.1
+6 ALLOW ALLOW ALLOW 5.6
+7 ALLOW ALLOW REQUEST_EVIDENCE 6.7
+8 ALLOW ALLOW ALLOW 5.1
+9 DENY DENY DENY 5.4
+10 REQUEST_EVIDENCE REQUEST_EVIDENCE REQUEST_EVIDENCE 5.7
+11 DENY DENY REQUEST_EVIDENCE 6.1
+WROTE ~/research/aim-safety-research/experiments/mechinterp/results/smoke_test.json
+exit 0

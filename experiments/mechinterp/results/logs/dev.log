@@ -1,0 +1,56 @@
+W1126 19:59:38.395000 85534 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/760 [00:00<?, ?it/s]Loading weights: 100%|██████████| 760/760 [00:00<00:00, 8186.32it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+5cbf281640 REQUEST_EVIDENCE REQUEST_EVIDENCE STRICT
+619dafe20e REQUEST_EVIDENCE REQUEST_EVIDENCE STRICT
+91664b366e DENY DENY STRICT
+d66d40360c REQUEST_EVIDENCE REQUEST_EVIDENCE STRICT
+23b6b4715c DENY DENY STRICT
+dd3edfcd8d REQUEST_EVIDENCE REQUEST_EVIDENCE STRICT
+d5e689a7bf REQUEST_EVIDENCE REQUEST_EVIDENCE STRICT
+7ec0de8510 REQUEST_EVIDENCE REQUEST_EVIDENCE STRICT
+781de6d379 DENY DENY STRICT
+5e289b5b1d DENY DENY STRICT
+2276e3b414 REQUEST_EVIDENCE REQUEST_EVIDENCE STRICT
+693c1a379f REQUEST_EVIDENCE REQUEST_EVIDENCE STRICT
+c3ab4522b0 ALLOW ALLOW STRICT
+6838903d7f DENY DENY STRICT
+eba42e4d8b DENY DENY STRICT
+d1dd521889 REQUEST_EVIDENCE REQUEST_EVIDENCE STRICT
+f153389271 ALLOW ALLOW STRICT
+560199ffae ALLOW ALLOW STRICT
+70c0c9c2be DENY DENY STRICT
+7bf8587a3f REQUEST_EVIDENCE REQUEST_EVIDENCE STRICT
+86310e83a8 DENY DENY STRICT
+f7c1def47b ALLOW ALLOW STRICT
+2a856e4850 REQUEST_EVIDENCE REQUEST_EVIDENCE STRICT
+8737579e9e DENY DENY STRICT
+1017f7fc0d REQUEST_EVIDENCE REQUEST_EVIDENCE STRICT
+0ddf9795a6 REQUEST_EVIDENCE REQUEST_EVIDENCE STRICT
+09107897f4 DENY DENY STRICT
+d24b1a3cda DENY DENY STRICT
+bca79ae37e ALLOW ALLOW STRICT
+f96812fea5 REQUEST_EVIDENCE REQUEST_EVIDENCE STRICT
+4c08f16421 DENY DENY STRICT
+43cc78e90f DENY DENY STRICT
+55ef77efbc DENY DENY STRICT
+17783fa698 DENY DENY STRICT
+0446e173d4 REQUEST_EVIDENCE REQUEST_EVIDENCE STRICT
+f243ff694b REQUEST_EVIDENCE REQUEST_EVIDENCE STRICT
+1630249cab REQUEST_EVIDENCE REQUEST_EVIDENCE STRICT
+f1501e4107 DENY DENY STRICT
+9dc9cbcbc7 REQUEST_EVIDENCE REQUEST_EVIDENCE STRICT
+7e86c78ed5 REQUEST_EVIDENCE REQUEST_EVIDENCE STRICT
+3c994358c4 REQUEST_EVIDENCE REQUEST_EVIDENCE STRICT
+ee99635926 REQUEST_EVIDENCE REQUEST_EVIDENCE STRICT
+f479b375db REQUEST_EVIDENCE REQUEST_EVIDENCE STRICT
+3165c04f3b REQUEST_EVIDENCE REQUEST_EVIDENCE STRICT
+3205aa9429 ALLOW ALLOW STRICT
+ee73190966 ALLOW ALLOW STRICT
+b79190d3e0 DENY DENY STRICT
+03a9b73bf2 DENY DENY STRICT
+SUMMARY {'n': 48, 'agree': 48, 'rate': 1.0, 'generation_invalid': 0, 'passes_90pct_rule': True}
+exit 0

@@ -1,0 +1,37 @@
+{
+  "dataset": "exploratory_v1",
+  "frozen_utc": "2026-11-25",
+  "items_file": "data/synthetic/exploratory_v1/items.jsonl",
+  "items_sha256": "9d9ec3f7712e9a6e0cff0f99f7b56deaab5a61fa00ca5b06e614982c95402d12",
+  "system_prompt_sha256": "9634bb0b6bd4bda7e8cd8373a111e184e54b989ecbda5c75000844d0cc958711",
+  "n_items": 864,
+  "n_base_scenarios": 24,
+  "cells": {
+    "cumulative|NEG": 48,
+    "existential|NEG": 48,
+    "existential|CONFLICT": 48,
+    "universal|CONFLICT": 48,
+    "existential|POS": 48,
+    "existential|MISS_IRREL": 48,
+    "universal|MISS_LCWA": 48,
+    "universal|NEG": 48,
+    "cumulative|MISS_FLOOR": 48,
+    "cumulative|CONFLICT": 48,
+    "cumulative|POS": 48,
+    "cumulative|MISS_CAP": 48,
+    "universal|MISS": 48,
+    "universal|POS": 48,
+    "existential|MISS_LCWA": 48,
+    "universal|MISS_IRREL": 48,
+    "existential|MISS": 48,
+    "cumulative|MISS": 48
+  },
+  "generator_files": {
+    "src/authorization_closure/generate.py": "c0b0ef6d048dfb3202f881180d8aae14db94d1c1662cf6494ac123e5b7da0898",
+    "src/authorization_closure/base_scenarios.py": "6b47a7cf22e13b03b5a8a5cafbd7984a69c17d85f32e4e00a095aca7975391d5",
+    "src/authorization_closure/oracle.py": "e75d4ad487957a69c48bc27291bdd0a0284eb5a61d552ad57a0d5bf88babc364",
+    "src/authorization_closure/kleene.py": "ad4ad8ebebd6663da14b6e340eeb5683e98eb14e37fc59a6d671dd953f0038c9"
+  },
+  "generation_command": "uv run python -m authorization_closure.generate --out data/synthetic/exploratory_v1 --seed 20261125",
+  "note": "Frozen BEFORE any model call. Any change after observing model output must be logged as an exploratory amendment."
+}

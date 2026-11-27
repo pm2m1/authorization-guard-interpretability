@@ -1,0 +1,15 @@
+W1126 20:05:37.520000 85716 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/760 [00:00<?, ?it/s]Loading weights:  55%|█████▌    | 421/760 [00:00<00:00, 4123.82it/s]Loading weights: 100%|██████████| 760/760 [00:00<00:00, 5992.08it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+96/864 items, 265s, peak driver 23.5 GB
+192/864 items, 528s, peak driver 23.5 GB
+288/864 items, 2636s, peak driver 23.5 GB
+384/864 items, 2836s, peak driver 23.5 GB
+480/864 items, 3127s, peak driver 24.6 GB
+576/864 items, 3393s, peak driver 24.6 GB
+672/864 items, 3668s, peak driver 24.6 GB
+768/864 items, 3947s, peak driver 24.6 GB
+864/864 items, 4227s, peak driver 25.6 GB
+DONE 4227.2127730846405
+exit 0

@@ -1,0 +1,23 @@
+authorization-guard-interpretability
+Copyright 2026 Parth Mishra
+(for original material in this repository, to the extent it is protected by
+copyright; third-party files listed below keep their own copyright and licence)
+
+This product includes software and documentation developed with AI assistance
+(Anthropic's Claude, in Claude Code); see README.md, "Contributions and AI assistance".
+
+Third-party material
+--------------------
+experiments/mechinterp/manifests/chat_template.jinja
+experiments/mechinterp/manifests/config.json
+  Copied unmodified from the official model repository
+  https://huggingface.co/Qwen/Qwen3.5-9B at revision
+  c202236235762e1c871ad0ccb60c8ee5ba337b9a, which is distributed under the
+  Apache License, Version 2.0 (licence stated in the model repository).
+  Copyright remains with the original authors.
+
+experiments/mechinterp/manifests/label_diag/tokenisation.json
+experiments/mechinterp/results/smoke_test.json (label_tokenisation)
+  Contain token IDs produced by the Qwen3.5-9B tokenizer (Apache-2.0).
+
+Model weights are not distributed with this repository.
