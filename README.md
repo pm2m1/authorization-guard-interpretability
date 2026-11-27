@@ -22,7 +22,7 @@ This is exploratory research. It does not establish causal representation use, s
 
 **Status:** a completed exploratory pilot. It has not been peer-reviewed.
 
-## Architecture
+## System Architecture
 
 ```mermaid
 %%{init: {"htmlLabels": false, "flowchart": {"htmlLabels": false, "wrappingWidth": 400}}}%%
@@ -60,6 +60,32 @@ Everything runs offline on synthetic items:
 - The interface diagnostic is a separate behavioural evaluation: it records no activations and makes no intervention.
 
 A detailed SVG export is in [figures/research_pipeline.svg](figures/research_pipeline.svg).
+
+## Model Architecture and Activation Extraction
+
+```mermaid
+%%{init: {"htmlLabels": false, "flowchart": {"htmlLabels": false, "wrappingWidth": 400, "rankSpacing": 35, "nodeSpacing": 30}}}%%
+flowchart TD
+    In["Prompt and evidence"] --> Tok["Chat template, tokenizer"]
+    Tok --> Dec
+    subgraph Dec["Decoder: 32 hybrid blocks"]
+        direction LR
+        G0["0–6"] --> B7(["7"]) --> G1["8–14"] --> B15(["15"]) --> G2["16–22"] --> B23(["23"]) --> G3["24–30"] --> B31(["31, pre-norm"])
+    end
+    Dec --> Norm["Final RMSNorm"]
+    Norm --> Head["LM head"]
+    Head --> Score["Four-label scoring"]
+    Dec -. "hooks on 7, 15, 23, 31" .-> Reps["Last token, user mean"]
+    Reps --> Probes["Offline linear probes"]
+    Score -- Task B labels --> Probes
+```
+
+- **Decoder.** Qwen3.5-9B has 32 hybrid decoder blocks: full attention at every fourth block (3, 7, 11, …, 31) and Gated DeltaNet linear attention in the other 24.
+- **Sampled blocks.** Read-only forward hooks capture blocks 7, 15, 23 and 31, all full-attention blocks; block 31 is read before the final RMSNorm. The hooks leave the logits bitwise unchanged.
+- **Representations.** Two 4096-dimensional vectors per block: the last prompt token (primary, pre-decision) and the mean over user-message tokens (secondary), stored as float16 `[864 × 4 × 2 × 4096]`.
+- **Offline probing.** Linear probes are fitted afterwards on CPU from the saved arrays, with leave-one-scenario-out validation. They play no part in the model's decisions; the four-label scores supply the Task B error labels.
+
+Full details are in [METHODS.md](METHODS.md#activation-extraction). A detailed SVG export is in [figures/activation_extraction.svg](figures/activation_extraction.svg).
 
 ## Principal results
 
