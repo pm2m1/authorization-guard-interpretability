@@ -28,7 +28,41 @@ This is a short description of each method component, with pointers to the froze
 
 ## Activation extraction
 
-![Activation extraction: chat-templated prompt into the 32-block hybrid decoder; forward hooks on full-attention blocks 7, 15, 23 and 31 (block 31 before the final RMSNorm); last-token and user-mean 4096-d representations; offline scenario-disjoint linear probes; separate four-label scoring.](figures/activation_extraction.svg)
+```mermaid
+flowchart TD
+    Input["System prompt + user message<br/>policy and evidence lines"] --> Template["Official chat template · tokenizer<br/>enable_thinking = False"]
+    Template --> G0
+
+    subgraph Decoder["Qwen3.5-9B text decoder: 32 hybrid blocks, hidden size 4096"]
+        G0["Blocks 0–6<br/>full attention at 3"] --> B7["Block 7 · full attention"]
+        B7 --> G1["Blocks 8–14<br/>full attention at 11"] --> B15["Block 15 · full attention"]
+        B15 --> G2["Blocks 16–22<br/>full attention at 19"] --> B23["Block 23 · full attention"]
+        B23 --> G3["Blocks 24–30<br/>full attention at 27"] --> B31["Block 31 · full attention"]
+    end
+
+    B31 --> Norm["Final RMSNorm"] --> Head["LM head"] --> Score["Four-label forced-choice scoring<br/>decision · margin"]
+
+    B7 -.->|hook| H1["Block output<br/>= hidden_states[b+1]"]
+    B15 -.->|hook| H1
+    B23 -.->|hook| H1
+    B31 -.->|hook| H2["Block 31 output<br/>before final RMSNorm"]
+
+    H1 --> Last["Last prompt token<br/>4096-d, primary"]
+    H1 --> Mean["Mean over user-message tokens<br/>4096-d, secondary"]
+    H2 --> Last
+    H2 --> Mean
+    Last --> Store["Stored float16 array<br/>864 × 4 blocks × 2 positions × 4096"]
+    Mean --> Store
+    Store --> Probes["Offline L2 linear probes (CPU)<br/>leave-one-scenario-out → Task A, Task B"]
+    Score -->|Task B labels| Probes
+```
+
+**How to read the diagram.**
+- **Attention types.** Full attention occurs at every fourth block (3, 7, …, 31). The other 24 blocks use Gated DeltaNet linear attention. The four sampled blocks are all full-attention blocks.
+- **Hooks.** Dotted edges are read-only forward hooks; logits are bitwise identical with and without them.
+- **Probes.** The probes are fitted afterwards on saved arrays and play no part in the model's decisions.
+
+A detailed SVG export is in [figures/activation_extraction.svg](figures/activation_extraction.svg).
 
 
 - **Sites.** Decoder blocks 7, 15, 23 and 31 (all full-attention blocks), captured with forward hooks.

@@ -46,6 +46,10 @@ The archive SHA-256 of each modified file is listed in `provenance_manifest.tsv`
   - `scripts/generate_figures.py`, a standard-library figure generator that reads the preserved results;
   - six SVGs in `figures/`;
   - `.github/workflows/ci.yml`, CPU-only checks.
+- **Final presentation update (third commit):**
+  - native Mermaid architecture diagrams in `README.md` (research pipeline) and `METHODS.md` (model architecture and activation extraction), derived from the implementation and the two SVG diagrams, which remain as detailed exports;
+  - the README example is described as the highest-margin incorrect ALLOW case, and its probabilities as normalised candidate probabilities under forced-choice scoring;
+  - the AI-assistance sentence lists experimental design, implementation, literature exploration, execution, analysis, debugging and documentation.
 
 - These summarise, index and visualise archive material and contain no new experimental results. Every number in them was checked against the preserved result files. The figures are generated from those files, and the README example is a recorded item quoted verbatim.
 - The overview and the contribution statement in `README.md` were provided by the author. The historical AI-assistance disclosure from the archive is retained alongside them.

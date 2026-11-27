@@ -20,7 +20,49 @@ This is exploratory research. It does not establish causal representation use, s
 
 **Status:** a completed exploratory pilot. It has not been peer-reviewed.
 
-![Research pipeline: synthetic scenarios and a formal oracle feed local Qwen3.5-9B scoring; activations and behavioural labels feed scenario-disjoint linear probes; a separate behavioural answer-interface diagnostic; preserved outputs are checked by SHA-256 manifests and a standard-library integrity script.](figures/research_pipeline.svg)
+## Architecture
+
+```mermaid
+flowchart TD
+    Gen["Scenario generator<br/>24 scenarios → 864 items"] --> Oracle["Formal three-valued oracle<br/>status → expected decision"]
+    Gen --> Model["Qwen3.5-9B · bf16<br/>Hugging Face transformers · Apple MPS"]
+    Model --> Scoring["Forced-choice scoring<br/>ALLOW · DENY · REQUEST_EVIDENCE · ESCALATE"]
+    Model -.->|read-only hooks| Acts["Stored activations<br/>blocks 7, 15, 23, 31 × 2 positions × 4096"]
+    Scoring --> Labels["Behavioural labels<br/>decision · margin"]
+
+    subgraph Offline["Offline linear probes (CPU)"]
+        TaskA["Task A: oracle-status decoding"]
+        TaskB["Task B: error prediction"]
+        CV["Leave-one-scenario-out over 24 scenarios<br/>fold-local preprocessing · shuffled-label controls"]
+    end
+
+    Acts --> TaskA
+    Acts --> TaskB
+    Labels --> TaskB
+    Oracle -->|ground truth| TaskA
+    Oracle -->|ground truth| TaskB
+    TaskA --- CV
+    TaskB --- CV
+
+    subgraph Diagnostic["Separate answer-interface diagnostic (behaviour only)"]
+        Interfaces["144 items · 4 label interfaces<br/>3 scoring normalisations"]
+        Agree["Free-generation agreement check"]
+        Interfaces --> Agree
+    end
+
+    Model -->|same checkpoint| Interfaces
+    Oracle --> Interfaces
+    Labels --> Integrity["Preserved raw outputs → SHA-256 manifest<br/>→ verify_integrity.py (no model)"]
+    Offline --> Integrity
+    Diagnostic --> Integrity
+```
+
+Everything runs offline on synthetic items:
+- The model's outputs are text-level authorization judgments; no tool or external action is executed.
+- The probes read stored activations after the forward passes and do not feed back into the model.
+- The interface diagnostic is a separate behavioural evaluation: it records no activations and makes no intervention.
+
+A detailed SVG export is in [figures/research_pipeline.svg](figures/research_pipeline.svg).
 
 ## Principal results
 
@@ -37,7 +79,7 @@ This is exploratory research. It does not establish causal representation use, s
 
 ## A real example
 
-This is item `901554c82b` (scenario DP03, existential policy, CONFLICT). It is the contradictory-evidence item that the original interface judged ALLOW with the largest recorded margin. Its text comes from `data/synthetic/exploratory_v1/items.jsonl`, and its scores from `experiments/mechinterp/results/behaviour_full.jsonl`, matched by `item_id`.
+This is item `901554c82b` (scenario DP03, existential policy, CONFLICT). It is **the highest-margin incorrect ALLOW case**: of the 15 contradictory-evidence items judged ALLOW under the original interface, it has the largest margin between the top two label scores. It was chosen by that rule. It is neither randomly selected nor representative of typical items. Its text comes from `data/synthetic/exploratory_v1/items.jsonl`, and its scores from `experiments/mechinterp/results/behaviour_full.jsonl`, matched by `item_id`.
 
 ```text
 Organisation: Ridgeback Logistics
@@ -61,12 +103,12 @@ Decision?
 | Oracle status → expected decision | INCONSISTENT → **ESCALATE** |
 | Observed judgment (forced choice) | **ALLOW** |
 | Recorded label log-probabilities | ALLOW −0.091 · DENY −3.289 · REQUEST_EVIDENCE −6.448 · ESCALATE −14.110 |
-| Probability over the four labels | ALLOW 0.959 · DENY 0.039 · REQUEST_EVIDENCE 0.0017 · ESCALATE 7.8 × 10⁻⁷ |
+| Normalised candidate probabilities (softmax over the four label log-probabilities under forced-choice scoring) | ALLOW 0.959 · DENY 0.039 · REQUEST_EVIDENCE 0.0017 · ESCALATE 7.8 × 10⁻⁷ |
 
 **Why this is an error.**
 - The system prompt states that every listed source is authoritative, and it reserves ESCALATE for "contradictory statements about a fact the policy depends on".
 - Two sources disagree about whether Valentina Cruz approved, and she is the only custodian with any approval.
-- The model instead resolves the conflict in favour of the approval and selects ALLOW with high confidence.
+- The model instead resolves the conflict in favour of the approval: ALLOW receives 0.959 of the normalised candidate probability. That figure is relative to the four candidates; it is not a calibrated probability of correctness.
 
 The raw record contains scores only. No explanation was generated for this item, so none is shown. It is a text-level judgment; nothing was executed.
 
@@ -158,7 +200,7 @@ This project was conducted as an independent, AI-assisted research investigation
 
 My contributions included defining the research objectives, directing the experimental workflow, reviewing methodological decisions, evaluating competing hypotheses, and determining the scope of subsequent investigations, as well as participating in experimental execution, analysis, and debugging.
 
-AI coding and research assistants were used for implementation, literature exploration, documentation.
+AI coding and research assistants were used for experimental design, implementation, literature exploration, experimental execution, analysis, debugging, and documentation.
 
 The repository preserves experimental protocols, negative findings, raw results, integrity checks, and documented methodological limitations to make the investigation transparent and reproducible.
 
