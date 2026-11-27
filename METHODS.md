@@ -29,7 +29,7 @@ This is a short description of each method component, with pointers to the froze
 ## Activation extraction
 
 ```mermaid
-%%{init: {"htmlLabels": false, "flowchart": {"htmlLabels": false, "rankSpacing": 35, "nodeSpacing": 30}}}%%
+%%{init: {"htmlLabels": false, "flowchart": {"htmlLabels": false, "wrappingWidth": 400, "rankSpacing": 35, "nodeSpacing": 30}}}%%
 flowchart TD
     In["Prompt and evidence"] --> Tok["Chat template, tokenizer"]
     Tok --> Dec

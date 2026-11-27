@@ -57,6 +57,7 @@ The archive SHA-256 of each modified file is listed in `provenance_manifest.tsv`
   - both Mermaid diagrams rebuilt with short single-line labels, no HTML line breaks and HTML labels disabled through an init directive;
   - simplified edges, and a horizontal decoder row in METHODS.md;
   - the details removed from labels now appear in the text and table beside each diagram;
+  - GitHub's renderer wrapped labels at a narrow default width, so `wrappingWidth` was raised in the same directive;
   - no scientific content changed.
 
 - These summarise, index and visualise archive material and contain no new experimental results. Every number in them was checked against the preserved result files. The figures are generated from those files, and the README example is a recorded item quoted verbatim.

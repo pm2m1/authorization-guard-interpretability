@@ -25,7 +25,7 @@ This is exploratory research. It does not establish causal representation use, s
 ## Architecture
 
 ```mermaid
-%%{init: {"htmlLabels": false, "flowchart": {"htmlLabels": false}}}%%
+%%{init: {"htmlLabels": false, "flowchart": {"htmlLabels": false, "wrappingWidth": 400}}}%%
 flowchart TD
     Gen["864 synthetic items"] --> Model["Qwen3.5-9B, bf16"]
     Gen --> Oracle["Formal oracle"]
