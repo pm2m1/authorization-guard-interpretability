@@ -119,7 +119,7 @@ This project was conducted as an independent, AI-assisted research investigation
 
 My contributions included defining the research objectives, directing the experimental workflow, reviewing methodological decisions, evaluating competing hypotheses, and determining the scope of subsequent investigations, as well as participating in experimental execution, analysis, and debugging.
 
-AI coding and research assistants were used for implementation, literature exploration, documentation, and assistance with experimental execution, analysis, and debugging.
+AI coding and research assistants were used for implementation, literature exploration, documentation.
 
 The repository preserves experimental protocols, negative findings, raw results, integrity checks, and documented methodological limitations to make the investigation transparent and reproducible.
 
