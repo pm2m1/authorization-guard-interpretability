@@ -29,38 +29,29 @@ This is a short description of each method component, with pointers to the froze
 ## Activation extraction
 
 ```mermaid
+%%{init: {"htmlLabels": false, "flowchart": {"htmlLabels": false, "rankSpacing": 35, "nodeSpacing": 30}}}%%
 flowchart TD
-    Input["System prompt + user message<br/>policy and evidence lines"] --> Template["Official chat template · tokenizer<br/>enable_thinking = False"]
-    Template --> G0
-
-    subgraph Decoder["Qwen3.5-9B text decoder: 32 hybrid blocks, hidden size 4096"]
-        G0["Blocks 0–6<br/>full attention at 3"] --> B7["Block 7 · full attention"]
-        B7 --> G1["Blocks 8–14<br/>full attention at 11"] --> B15["Block 15 · full attention"]
-        B15 --> G2["Blocks 16–22<br/>full attention at 19"] --> B23["Block 23 · full attention"]
-        B23 --> G3["Blocks 24–30<br/>full attention at 27"] --> B31["Block 31 · full attention"]
+    In["Prompt and evidence"] --> Tok["Chat template, tokenizer"]
+    Tok --> Dec
+    subgraph Dec["Decoder: 32 hybrid blocks"]
+        direction LR
+        G0["0–6"] --> B7(["7"]) --> G1["8–14"] --> B15(["15"]) --> G2["16–22"] --> B23(["23"]) --> G3["24–30"] --> B31(["31, pre-norm"])
     end
-
-    B31 --> Norm["Final RMSNorm"] --> Head["LM head"] --> Score["Four-label forced-choice scoring<br/>decision · margin"]
-
-    B7 -.->|hook| H1["Block output<br/>= hidden_states[b+1]"]
-    B15 -.->|hook| H1
-    B23 -.->|hook| H1
-    B31 -.->|hook| H2["Block 31 output<br/>before final RMSNorm"]
-
-    H1 --> Last["Last prompt token<br/>4096-d, primary"]
-    H1 --> Mean["Mean over user-message tokens<br/>4096-d, secondary"]
-    H2 --> Last
-    H2 --> Mean
-    Last --> Store["Stored float16 array<br/>864 × 4 blocks × 2 positions × 4096"]
-    Mean --> Store
-    Store --> Probes["Offline L2 linear probes (CPU)<br/>leave-one-scenario-out → Task A, Task B"]
-    Score -->|Task B labels| Probes
+    Dec --> Norm["Final RMSNorm"]
+    Norm --> Head["LM head"]
+    Head --> Score["Four-label scoring"]
+    Dec -. "hooks on 7, 15, 23, 31" .-> Reps["Last token, user mean"]
+    Reps --> Probes["Offline linear probes"]
+    Score -- Task B labels --> Probes
 ```
 
 **How to read the diagram.**
-- **Attention types.** Full attention occurs at every fourth block (3, 7, …, 31). The other 24 blocks use Gated DeltaNet linear attention. The four sampled blocks are all full-attention blocks.
-- **Hooks.** Dotted edges are read-only forward hooks; logits are bitwise identical with and without them.
-- **Probes.** The probes are fitted afterwards on saved arrays and play no part in the model's decisions.
+- **Decoder.** The decoder has 32 blocks. Full attention occurs at every fourth block (3, 7, 11, …, 31), and the other 24 blocks use Gated DeltaNet linear attention. Rectangles are ranges of blocks; rounded nodes are the four sampled blocks, all of them full-attention blocks.
+- **Hooks.** The dotted edge stands for read-only forward hooks on the sampled blocks, which leave the logits bitwise unchanged.
+  - Blocks 7, 15 and 23 are captured as the block output (`hidden_states[b+1]`).
+  - Block 31 is captured **before** the final RMSNorm.
+- **Representations.** Two per block, each 4096-dimensional: the last prompt token (primary, pre-decision) and the mean over user-message tokens (secondary). They are stored as float16 `[864 × 4 × 2 × 4096]`.
+- **Probes.** The probes are fitted afterwards, on CPU, on the saved arrays, with leave-one-scenario-out validation. They play no part in the model's decisions. The four-label scores supply the Task B error labels.
 
 A detailed SVG export is in [figures/activation_extraction.svg](figures/activation_extraction.svg).
 

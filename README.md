@@ -25,39 +25,34 @@ This is exploratory research. It does not establish causal representation use, s
 ## Architecture
 
 ```mermaid
+%%{init: {"htmlLabels": false, "flowchart": {"htmlLabels": false}}}%%
 flowchart TD
-    Gen["Scenario generator<br/>24 scenarios → 864 items"] --> Oracle["Formal three-valued oracle<br/>status → expected decision"]
-    Gen --> Model["Qwen3.5-9B · bf16<br/>Hugging Face transformers · Apple MPS"]
-    Model --> Scoring["Forced-choice scoring<br/>ALLOW · DENY · REQUEST_EVIDENCE · ESCALATE"]
-    Model -.->|read-only hooks| Acts["Stored activations<br/>blocks 7, 15, 23, 31 × 2 positions × 4096"]
-    Scoring --> Labels["Behavioural labels<br/>decision · margin"]
-
-    subgraph Offline["Offline linear probes (CPU)"]
-        TaskA["Task A: oracle-status decoding"]
-        TaskB["Task B: error prediction"]
-        CV["Leave-one-scenario-out over 24 scenarios<br/>fold-local preprocessing · shuffled-label controls"]
-    end
-
-    Acts --> TaskA
-    Acts --> TaskB
-    Labels --> TaskB
-    Oracle -->|ground truth| TaskA
-    Oracle -->|ground truth| TaskB
-    TaskA --- CV
-    TaskB --- CV
-
-    subgraph Diagnostic["Separate answer-interface diagnostic (behaviour only)"]
-        Interfaces["144 items · 4 label interfaces<br/>3 scoring normalisations"]
-        Agree["Free-generation agreement check"]
-        Interfaces --> Agree
-    end
-
-    Model -->|same checkpoint| Interfaces
-    Oracle --> Interfaces
-    Labels --> Integrity["Preserved raw outputs → SHA-256 manifest<br/>→ verify_integrity.py (no model)"]
-    Offline --> Integrity
-    Diagnostic --> Integrity
+    Gen["864 synthetic items"] --> Model["Qwen3.5-9B, bf16"]
+    Gen --> Oracle["Formal oracle"]
+    Model --> Scores["Forced-choice scores"]
+    Model -. hooks .-> Acts["Stored activations"]
+    Acts --> Probes["Task A and B probes"]
+    Scores --> Probes
+    Oracle --> Probes
+    CV["Leave-one-scenario-out"] -. validation .-> Probes
+    Model --> Diag["Interface diagnostic"]
+    Oracle --> Diag
+    Scores --> Check["Integrity checks"]
+    Probes --> Check
+    Diag --> Check
 ```
+
+| Node | Detail |
+|---|---|
+| 864 synthetic items | 24 base scenarios; 432 direct-wording (primary) and 432 dual-wording (stress) items; `generate.py`, seed 20261125 |
+| Formal oracle | three-valued (Kleene) evaluation: TRUE / FALSE / UNKNOWN / INCONSISTENT → expected decision; ground truth for the probes and the diagnostic |
+| Qwen3.5-9B, bf16 | Hugging Face `transformers` on Apple MPS, run locally with the official chat template |
+| Forced-choice scores | teacher-forced log-probabilities of ALLOW, DENY, REQUEST_EVIDENCE and ESCALATE → decision and margin |
+| Stored activations | read-only forward hooks at blocks 7, 15, 23 and 31 × 2 positions × 4096 dimensions |
+| Task A and B probes | linear probes for oracle status (A) and the model's errors (B), fitted offline on CPU |
+| Leave-one-scenario-out | scenario-disjoint validation over 24 scenarios, with fold-local preprocessing and shuffled-label controls |
+| Interface diagnostic | the same checkpoint on 144 items under 4 label interfaces and 3 scoring normalisations; behaviour only |
+| Integrity checks | preserved raw outputs, SHA-256 manifest and `verify_integrity.py`, which needs no model |
 
 Everything runs offline on synthetic items:
 - The model's outputs are text-level authorization judgments; no tool or external action is executed.

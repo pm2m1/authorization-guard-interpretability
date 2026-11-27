@@ -53,6 +53,11 @@ The archive SHA-256 of each modified file is listed in `provenance_manifest.tsv`
 - **CI follow-up:**
   - the pilot-test job moved from the retired `macos-14` runner image to `macos-15`; its steps are unchanged;
   - after the first fully successful run (Actions run 46008437704: 60 + 9 tests passed, 10/10 checksums, integrity PASS, ruff clean), a CI status badge was added to the README.
+- **Mermaid readability fix (fifth commit):**
+  - both Mermaid diagrams rebuilt with short single-line labels, no HTML line breaks and HTML labels disabled through an init directive;
+  - simplified edges, and a horizontal decoder row in METHODS.md;
+  - the details removed from labels now appear in the text and table beside each diagram;
+  - no scientific content changed.
 
 - These summarise, index and visualise archive material and contain no new experimental results. Every number in them was checked against the preserved result files. The figures are generated from those files, and the README example is a recorded item quoted verbatim.
 - The overview and the contribution statement in `README.md` were provided by the author. The historical AI-assistance disclosure from the archive is retained alongside them.
