@@ -1,5 +1,7 @@
 # Authorization Guard Interpretability
 
+[![checks](https://github.com/pm2m1/authorization-guard-interpretability/actions/workflows/ci.yml/badge.svg)](https://github.com/pm2m1/authorization-guard-interpretability/actions/workflows/ci.yml)
+
 An exploratory study of authorization reasoning, internal representation readout, and evaluation reliability in language models.
 
 Language models used as authorization guards must distinguish between sufficient, missing, and contradictory evidence. Incorrect decisions can result in unauthorized permissions or unnecessary restrictions, particularly when these models are integrated into agentic systems.
